@@ -1,2 +1,2 @@
 # mag-design
-mag design component build by mip
+mag design component built by mip
