@@ -1,0 +1,22 @@
+{
+  "name": "mag-design",
+  "version": "1.0.0",
+  "description": "mag design components",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipengine/mag-design.git"
+  },
+  "keywords": [
+    "mag"
+  ],
+  "author": "mipengine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mipengine/mag-design/issues"
+  },
+  "homepage": "https://github.com/mipengine/mag-design#readme"
+}
