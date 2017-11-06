@@ -11,8 +11,14 @@
 ### 编译获取最新包
 `clone`仓库
 ```bash
+# 克隆仓库
 git clone xxx
+# 进入仓库目录
+cd mag-design/
+
+# 安装依赖
 npm i
+# 构建
 npm run build
 ```
 
@@ -53,9 +59,15 @@ npm run build
 确保安装了Node.js(>=4)，然后克隆仓库并安装依赖。
 
 ```bash
+# 克隆仓库
 git clone xxx
-npm install
+# 进入仓库目录
+cd mag-design/
+
+# 安装依赖
+npm i
 ```
+
 
 ### 单元测试
 
@@ -74,7 +86,7 @@ mocha
 
 ```bash
 # 开启本地server预览组件，`npm preview `后加组件名称。
-npm preview button 
+npm run preview button 
 ```
 
 ## License
