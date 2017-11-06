@@ -15,7 +15,6 @@
 git clone xxx
 # 进入仓库目录
 cd mag-design/
-
 # 安装依赖
 npm i
 # 构建
@@ -37,9 +36,10 @@ npm run build
 ### 组件使用
 
 - class方式使用
+
 使用对应的`class`即可使用相关样式。对于依赖html结构的样式簇，无法单独使用，必须在样式簇结构下使用。
 ```html
-    <div class='button'></div>
+    <div class="button"></div>
 ```
 
 - 组件引用
@@ -63,7 +63,6 @@ npm run build
 git clone xxx
 # 进入仓库目录
 cd mag-design/
-
 # 安装依赖
 npm i
 ```
