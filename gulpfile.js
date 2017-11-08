@@ -13,6 +13,8 @@ const minimist = require('minimist');
 
 /*************************************************************************************************************************************/
 
+let options = minimist(process.argv.slice(2));
+
 let paths = {
   srcBase: 'src/',
   baseFile: 'src/base/main.styl',
@@ -53,7 +55,6 @@ gulp.task('build-demo', ['clean'], function () {
 
 gulp.task('build', ['build-module', 'build-min', 'build-demo']);
 
-let options = minimist(process.argv.slice(2));
 gulp.task('preview', ['build'], function () {
   browserSync.init([paths.src, paths.demo], {
     server: {
@@ -64,4 +65,14 @@ gulp.task('preview', ['build'], function () {
       }
     }
   });
+});
+
+gulp.task('creat', function () {
+    let cp = options.cp === true ? '' : paths.srcBase + options.cp;
+    if (!cp) {
+      console.warn('请填写组件名称!');
+      return ;
+    }
+    console.log('创建组件：' + options.cp);
+    console.log('等待建设...');
 });

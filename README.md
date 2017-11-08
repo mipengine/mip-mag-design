@@ -8,8 +8,13 @@
 
 ## 使用方式
 
-### 编译获取最新包
-`clone`仓库
+### npm安装,`dist/mag-design.min.css`获取最新编译包
+```bash
+npm install mip-mag-design --save-dev
+```
+
+### 手动编译获取最新包
+clone仓库
 ```bash
 # 克隆仓库
 git clone xxx
@@ -21,7 +26,7 @@ npm i
 npm run build
 ```
 
-获取`/dist/mag-ui.min.css`包进行部署。
+获取`dist/mag-design.min.css`包进行部署。
 
 ### 样式表部署
 
@@ -29,7 +34,7 @@ npm run build
 <head>
     <title></title>
     <!-- 引入全局style -->
-    <link rel="stylesheet" type="text/css" href="magui.css">
+    <link rel="stylesheet" type="text/css" href="mag-design.min.css">
 </head>
 ```
 
@@ -90,6 +95,37 @@ npm run preview button
 
 # 预览页面级别(所有组件)demo
 npm run preview
+```
+
+### 创建组件
+工具自动生成`styl`、`index.html`、`READEME.md`文件
+```bash
+    npm run creat xxx
+```
+
+### 样式开发
+
+- 样式开发遵从`stylus`语法，语法学习请移步：[stylus语法](http://stylus-lang.com/)
+- 组件样式须在`src/base/main.styl`中引入：
+
+```
+@require 'reset'
+@require '../button/button'
+@require '../link/link'
+```
+
+### demo开发
+
+书写`html`即可，引入`mag-design.min.css`路径为：
+
+- 组件demo引入方式：
+```html
+    <link rel="stylesheet" type="text/css" href="../mag-design.min.css">
+```
+
+- example下demo引入方式：
+```html
+    <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
 ```
 
 ## License
