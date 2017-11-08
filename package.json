@@ -4,9 +4,11 @@
   "description": "mag design components",
   "main": "index.js",
   "devDependencies": {
-    "gulp": "~3.9.1",
-    "stylus": "~0.54.5",
-    "browser-sync": "~2.18.13"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sourcemaps": "^2.6.1"
   },
   "scripts": {
     "build": "./node_modules/gulp/bin/gulp.js build",
@@ -26,7 +28,10 @@
     "url": "https://github.com/mipengine/mag-design/issues"
   },
   "homepage": "https://github.com/mipengine/mag-design#readme",
-  "man" :[
+  "man": [
     "./doc/main.md"
-  ]
+  ],
+  "dependencies": {
+    "gulp-stylus": "^2.6.0"
+  }
 }

@@ -1,4 +1,4 @@
-# mag-design
+# Mag Design
 
 本项目是mag-design设计规范的组件库，本文档主要介绍组件的使用方法和组件的开发指南。
 
