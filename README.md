@@ -68,16 +68,12 @@ npm i
 ```
 
 
-### 单元测试
-
-可以使用NPM Script进行测试，也可以全局安装`mocha`后直接运行Mocha。
+### 编译打包
 
 ```bash
-# 使用NPM Script
-npm test
-
-# 或者直接运行（需要安装mocha）：
-mocha
+npm run build
+# 或者
+./node_modules/gulp/bin/gulp.js build
 ```
 
 ### 预览

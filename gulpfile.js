@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
 
 /*************************************************************************************************************************************/
 
-var cleanCSSOptions = function () {
+let cleanCSSOptions = function () {
     return cleanCSS({
         format: {
             breaks: {
@@ -55,5 +55,5 @@ gulp.task('build-module-css', ['clean'], function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['build-module-css', 'build-min']);
+gulp.task('build', ['build-module-css', 'build-min']);
 
