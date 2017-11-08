@@ -7,14 +7,15 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.8.0",
-    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
-    "gulp-sourcemaps": "^2.6.1"
+    "gulp-sourcemaps": "^2.6.1",
+    "minimist": "^1.2.0"
   },
   "scripts": {
     "build": "./node_modules/gulp/bin/gulp.js build",
     "test": "./node_modules/gulp/bin/gulp.js test",
-    "preview": "./node_modules/gulp/bin/gulp.js preview"
+    "preview": "./node_modules/gulp/bin/gulp.js preview --cp"
   },
   "repository": {
     "type": "git",
