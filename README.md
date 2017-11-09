@@ -72,31 +72,6 @@ cd mag-design/
 npm i
 ```
 
-
-### 编译打包
-对`src`下的所有`styl`文件编译、压缩、打包到`dist`目录；将`src`和`example`下的`html`文件拷贝到`dist`下。
-
-```bash
-npm run build
-# 或者
-./node_modules/gulp/bin/gulp.js build
-```
-
-### 预览
-
-使用本地server预览组件。
-首先需要在对应组件下编写demo文件`index.html`。
-- 组件的demo路径：`src/xxx/index.html`
-- 页面级别(所有组件)的demo路径：`src/example/index.html`
-
-```bash
-# 预览单个组件demo
-npm run preview button
-
-# 预览页面级别(所有组件)demo
-npm run preview
-```
-
 ### 创建组件
 工具自动生成`styl`、`index.html`、`READEME.md`文件
 ```bash
@@ -126,6 +101,31 @@ npm run preview
 - example下demo引入方式：
 ```html
     <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
+```
+
+
+### 编译打包
+对`src`下的所有`styl`文件编译、压缩、打包到`dist`目录；将`src`和`example`下的`html`文件拷贝到`dist`下。
+
+```bash
+npm run build
+# 或者
+./node_modules/gulp/bin/gulp.js build
+```
+
+### 预览
+
+使用本地server预览组件。
+首先需要在对应组件下编写demo文件`index.html`。
+- 组件的demo路径：`src/xxx/index.html`
+- 页面级别(所有组件)的demo路径：`src/example/index.html`
+
+```bash
+# 预览单个组件demo
+npm run preview button
+
+# 预览页面级别(所有组件)demo
+npm run preview
 ```
 
 ## License
