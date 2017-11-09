@@ -1,5 +1,7 @@
 # Mag Design
 
+[![Build Status](https://travis-ci.org/dongshihao/mag-design.svg?branch=master)](https://travis-ci.org/dongshihao/mag-design)
+
 本项目是mag-design设计规范的组件库，本文档主要介绍组件的使用方法和组件的开发指南。
 
 ## 依赖与安装
