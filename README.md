@@ -142,11 +142,14 @@ git add xxx
 # 提交一个commit
 git commit -m 'xxxx'
 
-# 打包一个版本,通常打包小版本patch；此操作会自动发布npm包
+# 打包一个版本,通常打包小版本patch
 npm version [patch | minor | major]
 
 # 提交源代码到仓库
 git push
+
+# 发布npm包
+npm publish
 ```
 
 ## License
