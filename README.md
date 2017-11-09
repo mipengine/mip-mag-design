@@ -1,7 +1,4 @@
-# Mag Design
-
-[![Build Status](https://travis-ci.org/dongshihao/mag-design.svg?branch=master)](https://travis-ci.org/dongshihao/mag-design)
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+# Mag Design [![Build Status](https://travis-ci.org/dongshihao/mag-design.svg?branch=master)](https://travis-ci.org/dongshihao/mag-design) [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
 本项目是mag-design设计规范的组件库，本文档主要介绍组件的使用方法和组件的开发指南。
 
