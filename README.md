@@ -11,10 +11,14 @@
 ## 使用方式
 
 ### npm安装
-`./node_modules/mip-mag-design/dist/mag-design.min.css`获取最新编译包。
 
 ```bash
 npm install mip-mag-design --save-dev
+```
+
+编译工具(nodejs平台下)引用
+```javascript
+require('mip-mag-design');
 ```
 
 ### 手动编译获取最新包
