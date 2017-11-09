@@ -95,5 +95,5 @@ gulp.task('creat', function () {
 
 // 集成测试
 gulp.task('test', function () {
-   console.log('继承测试待建设...');
+   console.log('集成测试待建设...');
 });
