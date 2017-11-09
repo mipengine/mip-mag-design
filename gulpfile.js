@@ -2,6 +2,7 @@
  * @file build mag design components
  * @author dongshihao<dongshihao@baidu.com>
  */
+const fs = require('fs');
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
 const rimraf = require('gulp-rimraf');
@@ -22,7 +23,8 @@ let paths = {
 	dist: 'dist',
 	distModule: 'dist',
 	demo: 'src/**/*.html',
-	example: 'example'
+	example: 'example',
+  tools: 'tools/'
 };
 
 gulp.task('clean', function () {
@@ -68,11 +70,25 @@ gulp.task('preview', ['build'], function () {
 });
 
 gulp.task('creat', function () {
-    let cp = options.cp === true ? '' : paths.srcBase + options.cp;
-    if (!cp) {
+    let cp = options.cp;
+    let cpPath = cp === true ? '' : paths.srcBase + cp;
+
+    if (!cpPath) {
       console.warn('请填写组件名称!');
-      return ;
+      return;
     }
-    console.log('创建组件：' + options.cp);
-    console.log('等待建设...');
+
+
+    if (fs.existsSync(cpPath)) {
+      console.warn('组件已存在!');
+      return;
+    }
+
+    fs.mkdir(cpPath);
+
+    gulp.src([paths.tools + 'index.html', paths.tools + 'READEME.md']).pipe(gulp.dest(cpPath));
+    gulp.src(paths.tools + 'demo.styl').pipe(rename(cp + '.styl')).pipe(gulp.dest(cpPath));
+
+    console.log('创建组件：' + cp);
+
 });
