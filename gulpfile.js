@@ -92,3 +92,8 @@ gulp.task('creat', function () {
     console.log('创建组件：' + cp);
 
 });
+
+// 集成测试
+gulp.task('test', function () {
+   console.log('继承测试待建设...');
+});
