@@ -8,7 +8,9 @@
 
 ## 使用方式
 
-### npm安装,`dist/mag-design.min.css`获取最新编译包
+### npm安装
+`./node_modules/mip-mag-design/dist/mag-design.min.css`获取最新编译包。
+
 ```bash
 npm install mip-mag-design --save-dev
 ```
@@ -126,6 +128,23 @@ npm run preview button
 
 # 预览页面级别(所有组件)demo
 npm run preview
+```
+
+### 提交
+注意：`dist`需提交，用作npm包的引用文件。
+
+```bash
+# add需要提交的文件
+git add xxx
+
+# 提交一个commit
+git commit -m 'xxxx'
+
+# 打包一个版本,通常打包小版本patch；此操作会自动发布npm包
+npm version [patch | minor | major]
+
+# 提交源代码到仓库
+git push
 ```
 
 ## License
