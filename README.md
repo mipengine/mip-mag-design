@@ -1,6 +1,6 @@
 # Mag Design
 
-[![Build Status](https://travis-ci.org/dongshihao/mag-design.svg?branch=master)](https://travis-ci.org/dongshihao/mag-design)
+[![Build Status](https://travis-ci.org/mipengine/mag-design.svg?branch=master)](https://travis-ci.org/mipengine/mag-design)
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
