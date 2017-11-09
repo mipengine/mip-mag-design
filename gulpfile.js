@@ -2,6 +2,8 @@
  * @file build mag design components
  * @author dongshihao<dongshihao@baidu.com>
  */
+'use strict';
+
 const fs = require('fs');
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
