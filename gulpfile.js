@@ -75,6 +75,7 @@ gulp.task('preview', ['build'], function () {
       }
     }
   });
+  gulp.watch([paths.src, paths.demo], ['build']);
 });
 
 gulp.task('creat', function () {
