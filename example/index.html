@@ -1,22 +1,80 @@
 <!DOCTYPE html>
 <html mip>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
-        <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
-        <link rel="canonical" href="https://m.baidu.com/demo.html">
-        <title>mag-design components demo</title>
-        <style mip-custom></style>
-    </head>
-    <body>
-        <!--自定义样式-->
-        <p class="red-text">mag-design example</p>
-        <hr>
-        <div id="" class=""></div>
-        <!--mip 运行环境-->
-        <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
-        <!--分享组件 代码-->
-        <script src="https://mipcache.bdstatic.com/static/v1/mip-share/mip-share.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
+    <link rel="canonical" href="https://m.baidu.com/demo.html">
+    <title>mag-design components demo</title>
+    <style mip-custom></style>
+  </head>
+  <body>
+    <!--自定义样式-->
+    <h1>Mag Design</h1>
+    <!-- INSERT HTML HERE -->
+    <section data-mag-component="tag">
+      <h2>Tag 标签</h2>
+      <p>进行标记和分类的小标签，用于标记事务的属性和维度。</p>
+      <h3>常规标签</h3>
+      <p>基础标签，可以通过添加关闭图标变为可关闭标签，也可以作为一组标签使用，可以动态添加和删除。</p>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="tag">标签</span>
+          <span class="tag">直角标签</span>
+          <span class="tag">后图标标签 <i class="mg-icon mg-icon-close"></i></span>
+          <span class="tag-virtual tag"><i class="mg-icon mg-icon-add"></i> 新增</span>
+        </p>
+        <p class="no-white-space">
+          <span class="rounded tag">标签</span>
+          <span class="rounded tag">圆角标签</span>
+          <span class="rounded tag">后图标标签 <i class="mg-icon mg-icon-close"></i></span>
+          <span class="tag-virtual rounded tag"><i class="mg-icon mg-icon-add"></i> 新增</span>
+        </p>
+      </section>
+      <h3>颜色标签</h3>
+      <p>允许多色彩标签的样式，颜色可以从色版中选择。</p>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="bg-orange tag-fill tag">橙色</span>
+          <span class="bg-red tag-fill tag">红色</span>
+          <span class="bg-orange rounded tag-fill tag">圆角</span>
+          <span class="bg-red rounded tag-fill tag">也可以</span>
+        </p>
+      </section>
+      <h3>热门标签</h3>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="tag-plain tag-title tag">热门关键词:</span>
+          <span class="tag-plain tag">刘德华</span>
+          <span class="tag-plain active tag">梅艳芳</span>
+          <span class="tag-plain tag">周迅</span>
+          <span class="tag-plain tag">赵薇</span>
+        </p>
+      </section>
+      <h3>可选择标签</h3>
+      <p>点击切换选中效果</p>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="active tag">选中的标签</span>
+          <span class="rounded active tag">选中的圆角标签</span>
+          <span class="tag-fill bg-red rounded active tag">选中的涂色标签</span>
+        </p>
+        <p class="no-white-space">
+          <label><input type="checkbox" class="for-tag"><span class="tag">复选标签一</span></label>
+          <label><input type="checkbox" class="for-tag"><span class="tag">标签二</span></label>
+          <label><input type="checkbox" class="for-tag"><span class="tag">标签三</span></label>
+        </p>
+        <p class="no-white-space">
+          <label><input type="radio" checked name="demo-tag-1" class="for-tag"><span  class="rounded tag">标签一</span></label>
+          <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="bg-orange  tag-fill rounded tag">单选标签二</span></label>
+          <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="rounded tag">单选标签三</span></label>
+        </p>
+      </section>
+    </section>
+    <!--mip 运行环境-->
+    <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
+    <!--分享组件 代码-->
+    <script src="https://mipcache.bdstatic.com/static/v1/mip-share/mip-share.js"></script>
+  </body>
 </html>

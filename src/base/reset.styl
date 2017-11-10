@@ -1,5 +1,14 @@
 @import "normalize.css"
-* {
-    margin: 0;
-    padding: 0;
-}
+@import "variables"
+
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  font-size 14px
+  color lightness(color-black, 0.88)
+html
+  font-size 100px
+@media screen and (max-width: 360px)
+  html
+    font-size 90px
