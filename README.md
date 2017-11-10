@@ -137,7 +137,6 @@ npm run preview
 ```
 
 ### 提交
-注意：`dist`需提交，用作npm包的引用文件。
 
 ```bash
 # add需要提交的文件
