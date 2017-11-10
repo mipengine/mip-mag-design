@@ -1,14 +1,14 @@
-border-radius()
-  -webkit-border-radius: arguments
-  -moz-border-radius: arguments
-  border-radius: arguments
+@import "normalize.css"
+@import "variables"
 
-body a
-  font: 12px/1.4 "Lucida Grande", Arial, sans-serif
-  background: black
-  color: #ccc
-
-form input
-  padding: 5px
-  border: 1px solid
-  border-radius: 5px
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  font-size 14px
+  color lightness(color-black, 0.88)
+html
+  font-size 100px
+@media screen and (max-width: 360px)
+  html
+    font-size 90px

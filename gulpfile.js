@@ -37,7 +37,10 @@ gulp.task('clean', function () {
 gulp.task('build-min', ['clean'], function () {
     return gulp.src(paths.baseFile)
         .pipe(sourcemaps.init())
-        .pipe(stylus())
+        .pipe(stylus({
+            paths:[ './node_modules/', './node_modules/*/' ],
+            'include css': true
+        }))
         .pipe(cleanCSS())
         .pipe(rename('mag-design.min.css'))
         .pipe(sourcemaps.write('./'))
@@ -46,7 +49,10 @@ gulp.task('build-min', ['clean'], function () {
 
 gulp.task('build-module', ['clean'], function () {
     return gulp.src(paths.src)
-        .pipe(stylus())
+        .pipe(stylus({
+            paths:[ './node_modules/', './node_modules/*/' ],
+            'include css': true
+        }))
         .pipe(cleanCSS())
         .pipe(gulp.dest(paths.distModule));
 });

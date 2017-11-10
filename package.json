@@ -35,6 +35,10 @@
     "./doc/main.md"
   ],
   "dependencies": {
+    "nib": "^1.1.2",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
     "gulp-stylus": "^2.6.0"
   }
 }
