@@ -10,13 +10,14 @@
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-stylus": "^2.6.0",
     "minimist": "^1.2.0"
   },
   "scripts": {
-    "build": "./node_modules/gulp/bin/gulp.js build",
-    "test": "./node_modules/gulp/bin/gulp.js test",
-    "preview": "./node_modules/gulp/bin/gulp.js preview --cp",
-    "creat": "./node_modules/gulp/bin/gulp.js creat --cp"
+    "build": "gulp build",
+    "test": "gulp test",
+    "preview": "gulp preview --cp",
+    "creat": "gulp creat --cp"
   },
   "repository": {
     "type": "git",
@@ -37,8 +38,5 @@
   "dependencies": {
     "nib": "^1.1.2",
     "normalize.css": "^7.0.0"
-  },
-  "devDependencies": {
-    "gulp-stylus": "^2.6.0"
   }
 }
