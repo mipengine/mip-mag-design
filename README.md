@@ -25,7 +25,7 @@ require('mip-mag-design');
 clone仓库
 ```bash
 # 克隆仓库
-git clone xxx
+git clone https://github.com/mipengine/mag-design.git
 # 进入仓库目录
 cd mag-design/
 # 安装依赖
@@ -73,7 +73,7 @@ npm run build
 
 ```bash
 # 克隆仓库
-git clone xxx
+git clone https://github.com/mipengine/mag-design.git
 # 进入仓库目录
 cd mag-design/
 # 安装依赖
@@ -83,7 +83,7 @@ npm i
 ### 创建组件
 工具自动生成`styl`、`index.html`、`READEME.md`文件
 ```bash
-    npm run creat xxx
+npm run creat xxx
 ```
 
 ### 样式开发
@@ -103,12 +103,12 @@ npm i
 
 - 组件demo引入方式：
 ```html
-    <link rel="stylesheet" type="text/css" href="../mag-design.min.css">
+<link rel="stylesheet" type="text/css" href="../mag-design.min.css">
 ```
 
 - example下demo引入方式：
 ```html
-    <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
+<link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
 ```
 
 
@@ -117,8 +117,6 @@ npm i
 
 ```bash
 npm run build
-# 或者
-./node_modules/gulp/bin/gulp.js build
 ```
 
 ### 预览
