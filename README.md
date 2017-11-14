@@ -52,7 +52,7 @@ npm run build
 
 使用对应的`class`即可使用相关样式。对于依赖html结构的样式簇，无法单独使用，必须在样式簇结构下使用。
 ```html
-    <div class="button"></div>
+<div class="button"></div>
 ```
 
 - 组件引用
