@@ -10,6 +10,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-stylus": "^2.6.0",
     "minimist": "^1.2.0"
   },
   "scripts": {
@@ -37,8 +38,5 @@
   "dependencies": {
     "nib": "^1.1.2",
     "normalize.css": "^7.0.0"
-  },
-  "devDependencies": {
-    "gulp-stylus": "^2.6.0"
   }
 }
