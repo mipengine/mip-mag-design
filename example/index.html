@@ -7,14 +7,50 @@
     <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
     <link rel="canonical" href="https://m.baidu.com/demo.html">
     <title>mag-design components demo</title>
-    <style mip-custom></style>
+    <style mip-custom>
+      body {
+        max-width: 640px;
+        margin: 0 auto;
+        background: #fcfcfc;
+      }
+      .demo {
+        background: white;
+        max-width: 500px;
+        margin: 16px auto;
+      }
+      summary > h2 {
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <!--自定义样式-->
     <h1>Mag Design</h1>
-    <!-- INSERT HTML HERE -->
-    <section data-mag-component="tag">
-      <h2>Tag 标签</h2>
+    <details data-mag-component="typography">
+      <summary><h2>排版</h2></summary>
+      <section class="component demo">
+        <p>使用 h1~h4 来申明标题</p>
+        <h1>一级标题</h1>
+        <h2>二级标题</h2>
+        <h3>三级标题</h3>
+        <h4>四级标题</h4>
+        <p>普通文本</p>
+        <p>可使用以下类来调整文本尺寸：</p>
+        <p class="font-size-s">辅助文本</p>
+        <p class="font-size-xs">小型辅助文本</p>
+        <p class="font-size-title-s">小标题大小的文本</p>
+        <p class="font-size-title-m">中标题大小的文本</p>
+        <p class="font-size-title-l">大标题大小的文本</p>
+        <p class="font-size-title-xl">超大标题大小的文本</p>
+        <p>如有特殊需求，可使用 <code>font-size-0 ~ font-size-10</code></p>
+        <p class="font-size-0">0级尺寸文本</p>
+        <p class="font-size-5">5级尺寸文本</p>
+        <p class="font-size-8">8级尺寸文本</p>
+        <p class="font-size-10">10级尺寸文本</p>
+      </section>
+    </details>
+    <details data-mag-component="tag">
+      <summary><h2>Tag 标签</h2></summary>
       <p>进行标记和分类的小标签，用于标记事务的属性和维度。</p>
       <h3>常规标签</h3>
       <p>基础标签，可以通过添加关闭图标变为可关闭标签，也可以作为一组标签使用，可以动态添加和删除。</p>
@@ -71,7 +107,7 @@
           <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="rounded tag">单选标签三</span></label>
         </p>
       </section>
-    </section>
+    </details>
     <!--mip 运行环境-->
     <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
     <!--分享组件 代码-->
