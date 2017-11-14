@@ -157,7 +157,7 @@ npm publish
 
 ## License
 <a href='https://github.com/mipengine/mag-design/blob/master/LICENSE'>
-    <img src='https://img.shields.io/github/license/mashape/apistatus.svg'  title='license' alt='license'>
+    <img src='https://img.shields.io/github/license/mipengine/mag-design.svg'  title='license' alt='license'>
 </a>
 
 Copyright (c) 2017-present, Baidu Inc.
