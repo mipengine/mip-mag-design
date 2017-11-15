@@ -1,11 +1,9 @@
 @import "variables"
 @import "mixins"
 
-for size in xs s m l title-s title-m title-l title-xl
+for size in 'xs' 's' 'm' 'l' 'title-s' 'title-m' 'title-l' 'title-xl'
   .font-size-{size}
     text-size size
-.font-size-s
-  text-size 's'
 
 for size in (0..10)
   .font-size-{size}
@@ -19,7 +17,14 @@ i.mg-icon
   font-style normal
   &:before
     content: '☉'
-.bg-orange
-  background-color color-orange
-.bg-red
-  background-color color-red
+
+for c in 'gray' 'red' 'pink' 'grape' 'violet' 'indigo' 'blue' 'cyan' 'teal' 'green' 'lime' 'yellow' 'orange' 'primary' 'accent'
+  .bg-{c}
+    background-color: colors[c][7]
+  .fg-{c}
+    color: colors[c][7]
+  for l in (1..12)
+    .bg-{c}-{l}
+      background-color: colors[c][l]
+    .fg-{c}-{l}
+      background-color: colors[c][l]

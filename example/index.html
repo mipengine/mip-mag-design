@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html mip>
+<html mip class="hover-enabled">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -12,6 +12,7 @@
         max-width: 640px;
         margin: 0 auto;
         background: #fcfcfc;
+        padding: 5px 12px;
       }
       .demo {
         background: white;
@@ -21,13 +22,20 @@
       summary > h2 {
         display: inline-block;
       }
+      .__demo-outline-orange {
+        outline: orange 1px dashed;
+      }
+      .__demo-outline-green {
+        outline: green 1px dashed;
+      }
     </style>
   </head>
   <body>
     <!--自定义样式-->
     <h1>Mag Design</h1>
     <details data-mag-component="typography">
-      <summary><h2>排版</h2></summary>
+      <summary><h2>排版和通用类</h2></summary>
+      <h3>标题</h3>
       <section class="component demo">
         <p>使用 h1~h4 来申明标题</p>
         <h1>一级标题</h1>
@@ -35,18 +43,43 @@
         <h3>三级标题</h3>
         <h4>四级标题</h4>
         <p>普通文本</p>
-        <p>可使用以下类来调整文本尺寸：</p>
-        <p class="font-size-s">辅助文本</p>
-        <p class="font-size-xs">小型辅助文本</p>
-        <p class="font-size-title-s">小标题大小的文本</p>
-        <p class="font-size-title-m">中标题大小的文本</p>
-        <p class="font-size-title-l">大标题大小的文本</p>
-        <p class="font-size-title-xl">超大标题大小的文本</p>
-        <p>如有特殊需求，可使用 <code>font-size-0 ~ font-size-10</code></p>
-        <p class="font-size-0">0级尺寸文本</p>
-        <p class="font-size-5">5级尺寸文本</p>
-        <p class="font-size-8">8级尺寸文本</p>
-        <p class="font-size-10">10级尺寸文本</p>
+      </section>
+      <h3>设定文本尺寸</h3>
+      <section class="component demo">
+        <p>
+          <span class="font-size-xs">超小辅助文本</span>
+          <span class="font-size-s">辅助文本</span>
+          <span class="font-size-title-s">小标题大小的文本</span>
+          <span class="font-size-title-m">中标题大小的文本</span>
+          <span class="font-size-title-l">大标题大小的文本</span>
+          <span class="font-size-title-xl">超大标题大小的文本</span>
+        </p>
+      </section>
+      <h3>使用具体尺寸</h3>
+      <section class="component demo">
+        <p>
+          <span class="font-size-0">0级尺寸文本</span>
+          <span class="font-size-5">5级尺寸文本</span>
+          <span class="font-size-8">8级尺寸文本</span>
+          <span class="font-size-10">10级尺寸文本</span>
+        </p>
+      </section>
+      <h3>主题颜色</h3>
+      <section class="component demo">
+        <p>
+          <span class="fg-primary">主题色</span>
+          <span class="bg-primary">主题背景色</span>
+          <span class="fg-accent">次要色</span>
+          <span class="bg-accent">次要背景色</span>
+        </p>
+      </section>
+      <h3>具体颜色</h3>
+      <section class="component demo">
+        <p>
+          <span class="bg-blue">设置元素背景色</span>
+          <span class="fg-blue">设置文字前景色</span>
+          <span class="bg-yellow-2">设置不同深浅的颜色</span>
+        </p>
       </section>
     </details>
     <details data-mag-component="tag">
@@ -74,8 +107,8 @@
         <p class="no-white-space">
           <span class="bg-orange tag-fill tag">橙色</span>
           <span class="bg-red tag-fill tag">红色</span>
-          <span class="bg-orange rounded tag-fill tag">圆角</span>
-          <span class="bg-red rounded tag-fill tag">也可以</span>
+          <span class="bg-blue rounded tag-fill tag">圆角</span>
+          <span class="bg-violet rounded tag-fill tag">也可以</span>
         </p>
       </section>
       <h3>热门标签</h3>
@@ -106,6 +139,100 @@
           <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="bg-orange  tag-fill rounded tag">单选标签二</span></label>
           <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="rounded tag">单选标签三</span></label>
         </p>
+      </section>
+    </details>
+    <details open data-mag-component="button">
+      <summary><h2>按钮</h2></summary>
+      <p>按钮表示一定的用户行为，通常为点击行为。</p>
+      <h3>文字按钮</h3>
+      <p>中文因为没有大小写之分，所以文字按钮需要在颜色上进行区分。</p>
+      <section class="component demo">
+        <span class="btn btn-link">示例按钮</span>
+        <span class="btn btn-link btn-accent">示例按钮</span>
+      </section>
+      <h3>线型按钮</h3>
+      <p>对于 <code>&lt;button&gt;</code> 标签而言，不需要增加 <code>btn</code> 类。</p>
+      <section class="component demo">
+        <span class="btn btn-outline">示例按钮</span>
+        <button class="btn-outline btn-accent">示例按钮</button>
+        <button class="btn-outline" disabled>示例按钮</button>
+      </section>
+      <h3>实体按钮</h3>
+      <section class="component demo">
+        <button>示例按钮</button>
+        <button class="btn-accent">示例按钮</button>
+        <button disabled>示例按钮</button>
+        <button disabled class="btn-accent">示例按钮</button>
+      </section>
+      <h3>胶囊按钮</h3>
+      <section class="component demo">
+        <button class="btn-pill">胶囊按钮</button>
+        <button class="btn-outline btn-pill">示例按钮</button>
+        <button disabled class="btn-pill">示例按钮</button>
+        <button disabled class="btn-outline btn-pill">示例按钮</button>
+        <button class="btn-pill btn-accent">示例按钮</button>
+        <button class="btn-outline btn-pill btn-accent">示例按钮</button>
+        <button disabled class="btn-pill btn-accent">示例按钮</button>
+        <button disabled class="btn-outline btn-pill btn-accent">示例按钮</button>
+      </section>
+      <h3>尺寸</h3>
+      <section class="component demo">
+        <p>
+          <button class="btn-block">块级按钮</button><br>
+          <button class="btn-block btn-pill">块级按钮</button><br>
+          <button class="btn-block btn-outline">块级按钮</button><br>
+          <button class="btn-block btn-accent">块级按钮</button><br>
+          <button class="btn-big btn-block">块级大按钮</button><br>
+          <button class="btn-big btn-accent btn-block">块级大按钮</button><br>
+          <button class="btn-big btn-accent btn-pill btn-block">块级大按钮</button><br>
+        </p>
+        <p>
+          <button class="btn-tiny">Tiny 尺寸</button>
+          <button class="btn-small">Small 尺寸</button>
+          <button>标准尺寸</button>
+          <button class="btn-tiny btn-accent btn-pill">Tiny 尺寸</button>
+          <button class="btn-small btn-accent btn-outline">Small 尺寸</button>
+          <button class="btn btn-outline btn-accent btn-pill">标准尺寸</button>
+        </p>
+      </section>
+      <h3>点击区域和点击态</h3>
+      <p>在下方的 demo 中增加了橙色和绿色辅助线，方便观察行为。橙色表示可点区域，绿色表示 UI 反应实际区域。</p>
+      <section class="component demo">
+        <p class="no-white-space">
+            <a href="javascript:;" class="__demo-outline-orange">
+              <button class="btn __demo-outline-green">实体按钮</button>
+            </a>
+            <span>&nbsp;&nbsp;</span>
+            <a href="javascript:;" class="__demo-outline-orange">
+              <span class="btn btn-link __demo-outline-green">文本按钮</span>
+            </a>
+            <span>&nbsp;&nbsp;</span>
+            <a href="javascript:;" class="__demo-outline-orange">
+              <span class="btn btn-outline btn-link __demo-outline-green">线形按钮</span>
+            </a>
+        </p>
+      </section>
+      <p>由于移动端通常不使用 hover 特效，如果需要 hover 的效果，需要在祖先 DOM 上增加 class <code>hover-enabled</code>。</p>
+      <section class="component demo">
+        <p class="no-white-space hover-enabled">
+          <a href="javascript:;">
+            <button class="btn">实体按钮</button>
+          </a>
+          <span>&nbsp;&nbsp;</span>
+          <a href="javascript:;">
+            <span class="btn btn-link">文本按钮</span>
+          </a>
+          <span>&nbsp;&nbsp;</span>
+          <a href="javascript:;">
+            <span class="btn btn-outline">线形按钮</span>
+          </a>
+        </p>
+      </section>
+      <p>使用 .hover 类也可以手动增加 hover 效果，适用于 loading 等场景。</p>
+      <section class="component demo">
+        <button class="hover">实体按钮</button>
+        <button class="hover btn-link">文本按钮</button>
+        <button class="hover btn-outline">线形按钮</button>
       </section>
     </details>
     <!--mip 运行环境-->

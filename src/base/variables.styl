@@ -1,14 +1,17 @@
-color-black = #000
-color-red = #fc6c6e
-color-orange = #fd923a
-color-white = #fff
+@import "variables/color"
 
-color-default-fg = color-black
-color-default-bg = color-white
-color-reverse-fg = color-white
-color-reverse-bg = color-black
+primary-color-name = 'indigo'
+accent-color-name = 'teal'
+
+color-primary = colors[primary-color-name]
+color-accent = colors[accent-color-name]
+color-primary-default = color-primary[7]
+color-accent-default = color-accent[7]
+colors['primary'] = color-primary
+colors['accent'] = color-accent
 
 // font-sizes[0..10] for 11 font sizes
+// 0 = 12, 1 = 14, 2 = 16, 3 = 18
 font-sizes-numeric = 12px
 for i in (1..10)
   push(font-sizes-numeric, font-sizes-numeric[0] + (2*i))
