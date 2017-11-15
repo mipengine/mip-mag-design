@@ -9,11 +9,11 @@ tag-active()
     left 0
     width 100%
     height 100%
-    background-color alpha(color-black, 0.08)
+    background-color alpha(color-default-fg, 0.08)
 
 .tag
   display inline-block
-  border .01rem solid lightness(color-black, 0.64)
+  border .01rem solid alpha(color-default-fg, 0.64)
   height .28rem
   line-height .26rem
   padding 0 .08rem
@@ -27,7 +27,7 @@ tag-active()
     border-style dashed
   &.tag-fill
     border-color transparent
-    color color-reverse-fg
+    color color-default-bg
   &.tag-title
     margin-left 0
     margin-right 0
