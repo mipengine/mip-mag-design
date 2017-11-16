@@ -78,30 +78,6 @@ gulp.task('preview', ['build'], function () {
   gulp.watch([paths.src, paths.demo], ['build']);
 });
 
-gulp.task('creat', function () {
-    let cp = options.cp;
-    let cpPath = cp === true ? '' : paths.srcBase + cp;
-
-    if (!cpPath) {
-      console.warn('请填写组件名称!');
-      return;
-    }
-
-
-    if (fs.existsSync(cpPath)) {
-      console.warn('组件已存在!');
-      return;
-    }
-
-    fs.mkdir(cpPath);
-
-    gulp.src([paths.tools + 'index.html', paths.tools + 'READEME.md']).pipe(gulp.dest(cpPath));
-    gulp.src(paths.tools + 'demo.styl').pipe(rename(cp + '.styl')).pipe(gulp.dest(cpPath));
-
-    console.log('创建组件：' + cp);
-
-});
-
 // 集成测试
 gulp.task('test', function () {
    console.log('集成测试待建设...');
