@@ -1,6 +1,6 @@
 # Mag design in MIP
 
-[![Build Status](https://travis-ci.org/mipengine/mag-design.svg?branch=master)](https://travis-ci.org/mipengine/mag-design) [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![Build Status](https://travis-ci.org/mipengine/mip-mag-design.svg?branch=master)](https://travis-ci.org/mipengine/mip-mag-design) [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
 本项目是 Mag Design 设计规范的组件库，本文档主要介绍组件的使用方法和组件的开发指南。
 
@@ -25,7 +25,7 @@ require('mip-mag-design');
 clone仓库
 ```bash
 # 克隆仓库
-git clone https://github.com/mipengine/mag-design.git
+git clone https://github.com/mipengine/mip-mag-design.git
 # 进入仓库目录
 cd mag-design/
 # 安装依赖
@@ -73,7 +73,7 @@ npm run build
 
 ```bash
 # 克隆仓库
-git clone https://github.com/mipengine/mag-design.git
+git clone https://github.com/mipengine/mip-mag-design.git
 # 进入仓库目录
 cd mag-design/
 # 安装依赖
@@ -154,8 +154,8 @@ npm publish
 ```
 
 ## License
-<a href='https://github.com/mipengine/mag-design/blob/master/LICENSE'>
-    <img src='https://img.shields.io/github/license/mipengine/mag-design.svg'  title='license' alt='license'>
+<a href='https://github.com/mipengine/mip-mag-design/blob/master/LICENSE'>
+    <img src='https://img.shields.io/github/license/mipengine/mip-mag-design.svg'  title='license' alt='license'>
 </a>
 
 Copyright (c) 2017-present, Baidu Inc.

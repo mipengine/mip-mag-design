@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mipengine/mag-design.git"
+    "url": "git+https://github.com/mipengine/mip-mag-design.git"
   },
   "keywords": [
     "mag"
@@ -29,9 +29,9 @@
   "author": "mipengine",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mipengine/mag-design/issues"
+    "url": "https://github.com/mipengine/mip-mag-design/issues"
   },
-  "homepage": "https://github.com/mipengine/mag-design#readme",
+  "homepage": "https://github.com/mipengine/mip-mag-design#readme",
   "man": [
     "./doc/main.md"
   ],
