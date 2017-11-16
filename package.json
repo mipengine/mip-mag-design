@@ -1,6 +1,6 @@
 {
   "name": "mip-mag-design",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "mag design components",
   "main": "./dist/mag-design.min.css",
   "devDependencies": {
