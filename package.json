@@ -16,8 +16,7 @@
   "scripts": {
     "build": "gulp build",
     "test": "gulp test",
-    "preview": "gulp preview --cp",
-    "creat": "gulp creat --cp"
+    "preview": "gulp preview"
   },
   "repository": {
     "type": "git",
