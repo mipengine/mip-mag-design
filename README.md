@@ -1,6 +1,6 @@
 # Mag design in MIP
 
-[![Build Status](https://travis-ci.org/mipengine/mip-mag-design.svg?branch=master)](https://travis-ci.org/mipengine/mip-mag-design) [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![Build Status](https://travis-ci.org/mipengine/mip-mag-design.svg?branch=master)](https://travis-ci.org/mipengine/mag-design) [![npm](https://img.shields.io/npm/v/mip-mag-design.svg)](https://www.npmjs.com/package/mip-mag-design)
 
 本项目是 Mag Design 设计规范的组件库，本文档主要介绍组件的使用方法和组件的开发指南。
 
@@ -10,19 +10,48 @@
 
 ## 使用方式
 
-### npm安装
+### 使用 unpkg
 
-```bash
-npm install mip-mag-design --save-dev
+```html
+<link rel="stylesheet" type="text/css" src="//unpkg.com/mip-mag-design">
 ```
 
-编译工具(nodejs平台下)引用
+使用 unpkg 即可在开发环境下快速引入 mag-design-mip 的 css 文件。
+
+### npm 安装
+
+```bash
+npm install mip-mag-design --save
+```
+
+并在代码中使用合适的方式引用：
+
+#### webpack
+
 ```javascript
 require('mip-mag-design');
 ```
 
-### 手动编译获取最新包
-clone仓库
+#### html
+
+```html
+<link rel="stylesheet" type="text/css" src="/node_modules/mip-mag-design/dist/mag-design.min.css">
+```
+
+#### css
+
+```css
+@import "/node_modules/mip-mag-design/dist/mag-design.min.css"
+```
+
+#### stylus
+
+```stylus
+@require "/node_modules/mip-mag-design/src/base/main"
+```
+
+### 从源码编译
+
 ```bash
 # 克隆仓库
 git clone https://github.com/mipengine/mip-mag-design.git
@@ -34,36 +63,11 @@ npm i
 npm run build
 ```
 
-获取`dist/mag-design.min.css`包进行部署。
-
-### 样式表部署
-
-```html
-<head>
-    <title></title>
-    <!-- 引入全局style -->
-    <link rel="stylesheet" type="text/css" href="mag-design.min.css">
-</head>
-```
+获取 `dist/mag-design.min.css` 包进行部署。
 
 ### 组件使用
 
-- class方式使用
-
-使用对应的`class`即可使用相关样式。对于依赖html结构的样式簇，无法单独使用，必须在样式簇结构下使用。
-```html
-<div class="button"></div>
-```
-
-- 组件引用
-```html
-<mip-img
-    layout="responsive" 
-    width="350" 
-    height="263"
-    src="https://www.mipengine.org/static/img/sample_01.jpg">
-</mip-img>
-```
+参考 [example/index.html](example/index.html)
 
 ## 开发指南
 
