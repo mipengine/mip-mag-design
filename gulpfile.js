@@ -37,6 +37,7 @@ gulp.task('build', ['clean'], function () {
     .pipe(sourcemaps.init())
     .pipe(stylus({
       paths:[ './node_modules/', './node_modules/*/', './src/base/' ],
+      import: ['variables', 'mixins'],
       'include css': true
     }))
     .pipe(cleanCSS())
