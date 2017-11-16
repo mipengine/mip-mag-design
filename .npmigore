@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+public/
+npm-debug.log
+server.log
+Thumbs.db
+.DS_Store
+*.swp
+*.gz
+*.~
