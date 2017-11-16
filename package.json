@@ -2,7 +2,7 @@
   "name": "mip-mag-design",
   "version": "1.0.6",
   "description": "mag design components",
-  "main": "./dist/mag-design.min.css",
+  "main": "dist/mag-design.min.css",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
