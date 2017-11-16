@@ -54,7 +54,8 @@ gulp.task('preview', ['build'], function () {
       routes: {
         "/": paths.example
       }
-    }
+    },
+    open: false
   });
   gulp.watch([paths.src], ['build']);
   gulp.watch([paths.example + '/**']).on("change", browserSync.reload);
