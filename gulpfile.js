@@ -10,13 +10,15 @@ const stylus = require('gulp-stylus');
 const rimraf = require('gulp-rimraf');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
+const iconfont = require('gulp-iconfont');
+const iconfontCss = require('gulp-iconfont-css');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const minimist = require('minimist');
 
-let options = minimist(process.argv.slice(2));
-
-let paths = {
+const runTimestamp = Math.round(Date.now() / 1000);
+const options = minimist(process.argv.slice(2));
+const paths = {
   srcBase: 'src/',
   baseFile: 'src/main.styl',
 	src: 'src/**/*.styl',
@@ -32,7 +34,30 @@ gulp.task('clean', function () {
     .pipe(rimraf());
 });
 
-gulp.task('build', ['clean'], function () {
+gulp.task('iconfont', function () {
+  const fontName = 'mag-icon';
+  return gulp.src(['src/icons/svg/*.svg'])
+  .pipe(iconfontCss({
+    fontName: fontName,
+    fontPath: 'fonts/',
+    targetPath: '../../src/icons/icons.css',
+    cssClass: 'mag-icon'
+  }))
+  .pipe(iconfont({
+    fontName: fontName,
+    prependUnicode: true,
+    formats: ['ttf', 'eot', 'woff'],
+    timestamp: runTimestamp,
+    normalize: true,
+    fontHeight: 1000
+  }))
+  .on('glyphs', function(glyphs, options) {
+    console.log(glyphs, options);
+  })
+  .pipe(gulp.dest(paths.dist + '/fonts'));
+});
+
+gulp.task('build', ['iconfont'], function () {
   return gulp.src(paths.baseFile)
     .pipe(sourcemaps.init())
     .pipe(stylus({
