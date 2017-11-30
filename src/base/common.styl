@@ -12,10 +12,11 @@ for size in (0..10)
   font-size 0
   *
     text-size middle
-i.mg-icon
-  font-style normal
-  &:before
-    content: '☉'
+i.mag-icon
+  line-height 1
+  vertical-align middle
+  &::before
+    vertical-align text-top
 
 for c in 'gray' 'red' 'pink' 'grape' 'violet' 'indigo' 'blue' 'cyan' 'teal' 'green' 'lime' 'yellow' 'orange' 'primary' 'accent'
   .bg-{c}
