@@ -265,27 +265,34 @@
     <details open>
       <summary><h2>播放控件</h2></summary>
       <section class="component demo">
-        <div class="audio-player">
-          <div class="audio-control">
-            <i class="mag-icon mag-icon-voice"></i>
-          </div>
-          <div class="audio-body">
-            <div class="audio-title">点击播放医生的语音回答</div>
-            <div class="audio-seekbar">
-              <div class="audio-seekbar-fill" style="width: 20%"></div>
+        <mip-audio
+          src="https://mip-doc.bj.bcebos.com/guitar.mp3"
+          controls
+          customControls=".mip-audio-controller"
+          layout="container"
+        >
+          <div class="mip-audio-controller audio-player">
+            <div class="audio-control mip-audio-play-pause mip-audio-stopped-icon">
+              <i class="mag-icon mag-icon-voice"></i>
             </div>
-            <div class="audio-progress">
-              <div class="audio-time-current">00:00</div>
-              <div class="audio-time-total">05:28</div>
+            <div class="audio-body">
+              <div class="audio-title">点击播放医生的语音回答</div>
+              <div class="audio-seekbar mip-audio-seekbar">
+                <div class="audio-seekbar-fill mip-audio-seekbar-fill"></div>
+              </div>
+              <div class="audio-progress">
+                <div class="mip-audio-time-current audio-time-current">00:00</div>
+                <div class="audio-time-total mip-audio-time-total">--:--</div>
+              </div>
             </div>
           </div>
-        </div>
+        </mip-audio>
       </section>
     </details>
     <!--mip 运行环境-->
     <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
-    <!--分享组件 代码-->
-    <script src="https://mipcache.bdstatic.com/static/v1/mip-share/mip-share.js"></script>
     <script src="https://mipcache.bdstatic.com/static/v1/mip-showmore/mip-showmore.js"></script>
+    <!-- 测试中：mip-audio 组件 -->
+    <script src="https://jennyliang220.github.io/mip/mip-audio/mip-audio.js"></script>
   </body>
 </html>
