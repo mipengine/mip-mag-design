@@ -1,9 +1,14 @@
-.audio-player
+.audio-player, mip-audio .audio-player
   width 100%
   border solid 0.01rem #e9e9e9
   background-color #fcfcfc
   border-radius 0.03rem
   display flex
+  // fixes for mip
+  padding unset
+  position unset
+  max-width unset
+  box-sizing border-box
   .audio-control
     display flex
     justify-content center
@@ -15,12 +20,18 @@
     color color-primary-default
     border-radius 999rem
     overflow hidden
+    // fixes for mip
+    background unset
+    background-size unset
+    vertical-align unset
     i
       font-size 0.36rem
   .audio-body
     flex 1
-    margin 0.16rem
-    margin-left 0
+    display flex
+    flex-direction column
+    justify-content center
+    margin-right 0.16rem
     text-size 's'
     line-height 0.8
     .audio-seekbar
@@ -28,10 +39,29 @@
       width 100%
       height 0.02rem
       margin 0.1rem 0
+      // fixes for mip
+      display block
+      border unset
+      position unset
+      border-radius unset
+      vertical-align unset
       .audio-seekbar-fill
         height 100%
         background-color color-primary-default
+        // fix for mip
+        position unset
+        top unset
+        margin-top 0
+        border-radius unset
     .audio-progress
       display flex
       justify-content space-between
       color #999
+      .audio-time-current, .audio-time-total
+        // fix for mip
+        color unset
+        text-size 's'
+        display unset
+        margin-left 0
+        min-width unset
+        vertical-align unset
