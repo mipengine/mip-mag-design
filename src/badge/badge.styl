@@ -24,10 +24,14 @@
       margin-bottom 100%
   .badge-container &
     position absolute
-    top 0
-    right 0
-    transform translate3d(50%, -50%, 0)
+    bottom 100%
+    left 100%
     border .01rem solid color-default-bg
+    margin-left -0.08rem
+    margin-bottom -0.08rem
+    &.badge-point
+      margin-left -0.04rem
+      margin-bottom -0.04rem
 
 .badge-container
   position relative
