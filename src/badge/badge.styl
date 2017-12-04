@@ -1,0 +1,33 @@
+.badge
+  background-color color-red[7]
+  color color-default-bg
+  display inline-block
+  border-radius 99rem
+  font-size 75%
+  padding .05rem .09rem
+  margin .01rem
+  vertical-align middle
+  div&
+    height 0.16rem
+    line-height 0.16rem
+    padding 0 .06rem
+  &.badge-point
+    font-size 0
+    width .08rem
+    padding 0
+    box-sizing content-box
+    height unset
+    line-height 1
+    &::after
+      content ' '
+      display inline-block
+      margin-bottom 100%
+  .badge-container &
+    position absolute
+    top 0
+    right 0
+    transform translate3d(50%, -50%, 0)
+    border .01rem solid color-default-bg
+
+.badge-container
+  position relative

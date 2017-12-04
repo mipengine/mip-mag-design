@@ -28,6 +28,14 @@
       .__demo-outline-green {
         outline: green 1px dashed;
       }
+      .__demo_placeholder {
+        width: 64px;
+        height: 64px;
+        background: #ccc;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 8px;
+      }
     </style>
   </head>
   <body>
@@ -262,7 +270,7 @@
       <hr class="hr-xl">
 
     </details>
-    <details open>
+    <details>
       <summary><h2>播放控件</h2></summary>
       <section class="component demo">
         <mip-audio
@@ -288,6 +296,31 @@
           </div>
         </mip-audio>
       </section>
+    </details>
+    <details open data-mag-component="badge">
+      <summary><h2>徽章</h2></summary>
+      <h3>与文字一起使用</h3>
+      <section class="component demo">
+        <h3>示例文字 <span class="badge">NEW</span></h3>
+        <h4>示例文字 <span class="badge">NEW</span></h4>
+        <p>
+          <div class="badge badge-round">5</div>
+          <div class="badge badge-round badge-outline">8</div>
+          <div class="badge bg-accent">255</div>
+          <div class="badge bg-primary">16</div>
+          <div class="badge bg-green">OK</div>
+          <div class="badge badge-point"></div>
+        </p>
+      </section>
+      <h3>放在元素的右上角</h3>
+      <div class="component demo">
+        <div class="__demo_placeholder badge-container">
+          <span class="badge">1</span>
+        </div>
+        <div class="__demo_placeholder badge-container">
+          <span class="badge badge-point"></span>
+        </div>
+      </div>
     </details>
     <!--mip 运行环境-->
     <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
