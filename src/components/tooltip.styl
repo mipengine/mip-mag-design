@@ -1,0 +1,91 @@
+.tooltip-container
+  position relative
+  display inline-block
+.tooltip
+  // variables
+  tooltipHeight = 0.32rem
+  tooltipRadius = 0.04rem
+  tooltipOpacity = 0.8
+  arrowOffset = 0.15rem
+  arrowSize = 0.06rem
+  contentGap = 0.12rem
+  contentPadding = 0 0.16rem
+  transOffset = 0.12rem
+  transIn = 300ms ease-in
+  transOut = 280ms ease-out
+
+  // tooltip content
+  line-height tooltipHeight
+  height tooltipHeight
+  padding contentPadding
+  background alpha(color-default-fg, 0.88)
+  color color-default-bg
+  width auto
+  position absolute
+  white-space nowrap
+  border-radius tooltipRadius
+  // hide tooltip by default
+  opacity 0
+  pointer-events none
+  transform translate3d(0, 0, 0)
+  .tooltip-container:hover &
+    opacity tooltipOpacity
+    pointer-events auto
+    transform translate3d(0, 0, 0)
+  // tooltip arrow
+  &::after
+    content ''
+    border arrowSize solid transparent
+    font-size 0
+    width 0
+    height 0
+    position absolute
+  // all of four directions
+  & // position tooltips and arrows
+    &.tooltip-left, &.tooltip-right
+      top 50%
+      margin-top -0.5 * tooltipHeight
+      &::after
+        top arrowOffset
+        transform translate3d(0, -50%, 0)
+    &.tooltip-left
+      margin-right contentGap
+      right 100%
+      &::after
+        border-left-color @background
+        left 100%
+    &.tooltip-right
+      margin-left contentGap
+      left 100%
+      &::after
+        border-right-color @background
+        right 100%
+    &.tooltip-top, &.tooltip-bottom
+      left 0
+      &::after
+        left arrowOffset
+        transform translate3d(-50%, 0, 0)
+    &.tooltip-top
+      bottom 100%
+      margin-bottom contentGap
+      &::after
+        border-top-color @background
+        top 100%
+    &.tooltip-bottom
+      top 100%
+      margin-top contentGap
+      &::after
+        border-bottom-color @background
+        bottom 100%
+  & // transitions
+    transition opacity transIn, transform transOut
+    .tooltip-container:hover &
+      transition opacity transIn, transform transOut
+    &.tooltip-left
+      transform translate3d(transOffset, 0, 0)
+    &.tooltip-right
+      transform translate3d(-1 * transOffset, 0, 0)
+    &.tooltip-top
+      transform translate3d(0, transOffset, 0)
+    &.tooltip-bottom
+      transform translate3d(0, -1 * transOffset, 0)
