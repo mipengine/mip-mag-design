@@ -12,6 +12,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
+const consolidate = require('gulp-consolidate');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const minimist = require('minimist');
@@ -37,12 +38,6 @@ gulp.task('clean', function () {
 gulp.task('iconfont', function () {
   const fontName = 'mag-icon';
   return gulp.src(['src/icons/svg/*.svg'])
-  .pipe(iconfontCss({
-    fontName: fontName,
-    fontPath: 'fonts/',
-    targetPath: '../../src/icons/icons.css',
-    cssClass: 'mag-icon'
-  }))
   .pipe(iconfont({
     fontName: fontName,
     prependUnicode: true,
@@ -51,8 +46,16 @@ gulp.task('iconfont', function () {
     normalize: true,
     fontHeight: 1000
   }))
-  .on('glyphs', function(glyphs, options) {
-    console.log(glyphs, options);
+  .on('glyphs', function (glyphs, options) {
+    return gulp.src('template/iconfont.styl')
+    .pipe(consolidate('lodash', {
+      fontName: fontName,
+      className: 'mag-icon',
+      fontPath: 'fonts/',
+      glyphs: glyphs,
+      targetPath: '../../src/icons/icons.css'
+    }))
+    .pipe(gulp.dest(paths.srcBase + 'base/variables'))
   })
   .pipe(gulp.dest(paths.dist + '/fonts'));
 });
