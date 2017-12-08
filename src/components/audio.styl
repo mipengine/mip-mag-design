@@ -16,8 +16,12 @@
     border-radius 999rem
     overflow hidden
     i
-      font-size 0.36rem
+      font-size 0.42rem
+      line-height 0.36rem
       font-icon 'voice-frame-3'
+    &.mip-audio-playing-icon i::before
+      font-icon-content 'voice-frame-1'
+      animation 1.5s linear infinite mag--audio-playing
   .audio-body
     flex 1
     display flex
@@ -33,16 +37,19 @@
       margin 0.1rem 0
       .audio-seekbar-fill
         height 100%
+        width 0%
         background-color color-primary-default
     .audio-progress
       display flex
       justify-content space-between
       color #999
-      .audio-time-current, .audio-time-total
-        // fix for mip
-        color unset
-        text-size 's'
-        display unset
-        margin-left 0
-        min-width unset
-        vertical-align unset
+// playing animation
+@keyframes mag--audio-playing
+  0%
+    font-icon-content 'voice-frame-1'
+  33.33%
+    font-icon-content 'voice-frame-2'
+  66%
+    font-icon-content 'voice-frame-3'
+  100%
+    font-icon-content 'voice-frame-1'
