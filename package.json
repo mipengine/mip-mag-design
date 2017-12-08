@@ -20,7 +20,8 @@
   "scripts": {
     "build": "gulp build",
     "test": "gulp test",
-    "preview": "gulp preview"
+    "preview": "gulp preview",
+    "preversion": "npm run build"
   },
   "repository": {
     "type": "git",
