@@ -19,7 +19,7 @@ You can use `.mag-icon-ICONNAME` in your HTML to use iconfont icons, and `ICONNA
 
 ### For users
 
-You can just use `<i class="mag icon mag-icon-${name}">` in HTML.
+You can just use `<i class="mag-icon mag-icon-${name}">` in HTML.
 
 ### For Stylus Developers
 
