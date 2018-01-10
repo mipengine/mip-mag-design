@@ -5,7 +5,7 @@ script:
   - npm run build
 before_deploy:
   - cp example/redirect.html index.html
-  - sed -i '#dist/##g' .gitignore
+  - sed -i '/dist/d' .gitignore
 deploy:
   provider: pages
   skip_cleanup: true
