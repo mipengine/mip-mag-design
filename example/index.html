@@ -357,8 +357,16 @@
     <details open data-mag-component="toast">
       <summary><h2>Toast</h2></summary>
       <section class="component demo">
-        <button on="tap:demo-toast.show">显示 Toast</button>
+        <button on="tap:demo-toast.show">Toast</button>
         <mip-toggle id="demo-toast" class="toast-container" enterclass="toast-show" hidetimeout="3000">
+          <div class="toast-content">添加关注成功</div>
+        </mip-toggle>
+        <button on="tap:demo-toast2.show">头部 Toast</button>
+        <mip-toggle id="demo-toast2" class="toast-container toast-top" enterclass="toast-show" hidetimeout="3000">
+          <div class="toast-content">添加关注成功</div>
+        </mip-toggle>
+        <button on="tap:demo-toast3.show">底部 Toast</button>
+        <mip-toggle id="demo-toast3" class="toast-container toast-bottom" enterclass="toast-show" hidetimeout="3000">
           <div class="toast-content">添加关注成功</div>
         </mip-toggle>
       </section>

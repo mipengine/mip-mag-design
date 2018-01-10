@@ -15,3 +15,17 @@
   pointer-events none
   &.toast-show
     opacity 1
+  &.toast-top, &.toast-bottom
+    transform none
+    width 100%
+    left 0
+    border-radius 0
+  &.toast-top
+    top 0
+  &.toast-bottom
+    top unset
+    bottom 0
+    transform translate3d(0, 100%, 0)
+    transition 240ms transform ease-in, 240ms opacity ease-in-out
+    &.toast-show
+      transform translate3d(0, 0, 0)
