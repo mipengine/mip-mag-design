@@ -157,6 +157,10 @@ git push
 npm publish
 ```
 
+### 提交信息规范
+
+git commit 信息和 pull request 标题必须遵循 MIP 项目的 [提交信息规范](https://github.com/mipengine/spec/blob/master/docs/commit-message-spec.md) ，否则不予合入。
+
 ## License
 <a href='https://github.com/mipengine/mip-mag-design/blob/master/LICENSE'>
     <img src='https://img.shields.io/github/license/mipengine/mip-mag-design.svg'  title='license' alt='license'>
