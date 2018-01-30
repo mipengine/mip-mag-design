@@ -14,14 +14,32 @@
     "gulp-rimraf": "^0.2.1",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-stylus": "^2.6.0",
+    "husky": "^0.14.3",
     "lodash": "^4.17.4",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "validate-commit-msg": "^2.14.0"
   },
   "scripts": {
     "build": "gulp build",
     "test": "gulp test",
     "preview": "gulp preview",
-    "preversion": "npm run build"
+    "preversion": "npm run build",
+    "commitmsg": "validate-commit-msg"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore",
+        "revert",
+        "release"
+      ]
+    }
   },
   "repository": {
     "type": "git",
