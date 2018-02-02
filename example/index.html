@@ -19,6 +19,9 @@
         max-width: 500px;
         margin: 16px auto;
       }
+      .demo-border {
+        border: 1px solid  #ccc;
+      }
       summary > h2 {
         display: inline-block;
       }
@@ -339,7 +342,7 @@
         </div>
       </section>
     </details>
-    <details data-mag-component="iconfont">
+    <details data-mag-component="iconfont" open>
       <summary><h2>图标</h2></summary>
       <section class="component demo">
         <table>
@@ -401,6 +404,11 @@
               <td><i class="icon icon-share"></i></td>
               <td><code>&lt;i class="icon icon-share"&gt;&lt;/i&gt;</code></td>
             </tr>
+            <tr>
+              <td>查看更多</td>
+              <td><i class="icon icon-more2"></i></td>
+              <td><code>&lt;i class="icon icon-more2"&gt;&lt;/i&gt;</code></td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -422,7 +430,161 @@
         </mip-toggle>
       </section>
     </details>
+    <details data-mag-component="scrollbox">
+      <summary><h2>图片横滑</h2></summary>
+      <section class="component demo demo-border">
+        <mip-scrollbox data-type="row" class="scrollbox">
+          <div data-wrapper>
+            <div data-inner>
+              <div data-scroller class="flexbox">
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?a"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?b"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?c"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?d"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?e"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?f"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4" class="scrollbox-more">
+                  <a href="https://www.mipengine.org" class="block">
+                    <div>
+                      <i class="icon icon-more2"></i>
+                      <span class="line-clamp1 gap-top">查看更多</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mip-scrollbox>
+      </section>
+      <section class="component demo demo-border">
+        <mip-scrollbox data-type="row" class="scrollbox">
+          <div data-wrapper>
+            <div data-inner>
+              <div data-scroller class="flexbox">
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?a"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?b"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?c"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?d"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?e"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?f"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4" class="scrollbox-more">
+                  <a href="https://www.mipengine.org" class="block">
+                    <div>
+                      <i class="icon icon-more2"></i>
+                      <span class="line-clamp1 gap-top">查看更多</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mip-scrollbox>
+      </section>
+    </details>
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-audio/mip-audio.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-toggle/mip-toggle.js"></script>
