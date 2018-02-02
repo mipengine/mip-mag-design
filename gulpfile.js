@@ -36,7 +36,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('iconfont', function () {
-  const fontName = 'mag-icon';
+  const fontName = 'icon';
   return gulp.src(['src/icons/svg/*.svg'])
   .pipe(iconfont({
     fontName: fontName,
@@ -50,7 +50,7 @@ gulp.task('iconfont', function () {
     return gulp.src('template/iconfont.styl')
     .pipe(consolidate('lodash', {
       fontName: fontName,
-      className: 'mag-icon',
+      className: 'icon',
       fontPath: 'fonts/',
       glyphs: glyphs,
       targetPath: '../../src/icons/icons.css'

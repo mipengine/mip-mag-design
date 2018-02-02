@@ -21,7 +21,7 @@
       font-icon 'voice-frame-3'
     &.mip-audio-playing-icon i::before
       font-icon-content 'voice-frame-1'
-      animation 1.5s linear infinite mag--audio-playing
+      animation 1.5s linear infinite audio-playing
   .audio-body
     flex 1
     display flex
@@ -44,7 +44,7 @@
       justify-content space-between
       color #999
 // playing animation
-@keyframes mag--audio-playing
+@keyframes audio-playing
   0%
     font-icon-content 'voice-frame-1'
   33.33%

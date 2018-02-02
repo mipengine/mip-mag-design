@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "mag-icon";
-  src: url('fonts/mag-icon.eot');
-  src: url('fonts/mag-icon.eot?#iefix') format('eot'),
-    url('fonts/mag-icon.woff2') format('woff2'),
-    url('fonts/mag-icon.woff') format('woff'),
-    url('fonts/mag-icon.ttf') format('truetype'),
-    url('fonts/mag-icon.svg#mag-icon') format('svg');
+  font-family: "icon";
+  src: url('fonts/icon.eot');
+  src: url('fonts/icon.eot?#iefix') format('eot'),
+    url('fonts/icon.woff2') format('woff2'),
+    url('fonts/icon.woff') format('woff'),
+    url('fonts/icon.ttf') format('truetype'),
+    url('fonts/icon.svg#icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.mag-icon::before {
+.icon::before {
   display: inline-block;
-  font-family: "mag-icon";
+  font-family: "icon";
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -23,5 +23,5 @@
 }
 
 for iconName, codepoint in icon-font-codepoint
-  .mag-icon-{iconName}
+  .icon-{iconName}
     font-icon iconName
