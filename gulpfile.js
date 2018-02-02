@@ -85,7 +85,8 @@ gulp.task('preview', ['build'], function () {
       }
     },
     open: false,
-    port: 8888
+    port: 8888,
+    cors: true
   });
   gulp.watch([paths.src], ['build']);
   gulp.watch([paths.example + '/**']).on("change", browserSync.reload);
