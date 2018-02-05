@@ -2,20 +2,24 @@
  * @file 常用文本标签
  */
 
+border-and-color(border, color)
+  color color
+  border 0.01rem solid border
+
 .label
   display inline-block
-  height 14px
-  padding 0 2px
-  margin-bottom 2px
+  height .14rem
+  padding 0 0.02rem
+  margin-bottom 0.02rem
   text-decoration none
   vertical-align middle
   color #fff
-  font-size 10px
-  line-height 15px
+  font-size 0.1rem
+  line-height 0.15rem
   font-style normal
   font-weight 400
   overflow hidden
-  border-radius 2px
+  border-radius 0.02rem
 
 .label-danger
   background-color #f13f40
@@ -30,48 +34,40 @@
   font-weight 400
   font-family sans-serif
 
-
 .label-box
   display inline-block
-  padding 1px 2px
-  margin-bottom 2px
+  padding 0.01rem 0.02rem
+  margin-bottom 0.02rem
   text-decoration none
   vertical-align middle
-  font-size 10px
-  line-height 11px
-  height 10px
+  font-size 0.1rem
+  line-height 0.11rem
+  height 0.1rem
   font-style normal
   font-weight 400
   overflow hidden
   -webkit-box-sizing content-box
   box-sizing content-box
-  border-radius 2px
+  border-radius 0.02rem
 
 .label-box-gray
-  color #999
-  border 1px solid #e3e3e3
+  border-and-color(#e3e3e3, #999)
 
 .label-box-orange
-  color #f60
-  border 1px solid #f3d9c5
+  border-and-color(#f3d9c5, #f60)
 
 .label-box-pink
-  color #ff4683
-  border 1px solid #ffc7da
+  border-and-color(#ffc7da, #ff4683)
 
 .label-box-red
-  color #f13f40
-  border 1px solid #efb9b9
+  border-and-color(#efb9b9, #f13f40)
 
 .label-box-blue
-  color #2b99ff
-  border 1px solid #b3d4f3
+  border-and-color(#b3d4f3, #2b99ff)
 
 .label-box-green
-  color #65b12c
-  border 1px solid #d7efc6
+  border-and-color(#d7efc6, #65b12c)
 
 .label-box-yellow
-  color #faa90e
-  border 1px solid #feecc9
+  border-and-color(#feecc9, #faa90e)
 
