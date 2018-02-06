@@ -7,6 +7,7 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
+const autoprefixer = require('autoprefixer-stylus');
 const rimraf = require('gulp-rimraf');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
@@ -66,6 +67,11 @@ gulp.task('build', ['iconfont'], function () {
     .pipe(stylus({
       paths:[ './node_modules/', './node_modules/*/', './src/base/' ],
       import: ['variables', 'mixins'],
+      use: [
+        autoprefixer({
+          browsers: ['iOS >= 8', 'ie >= 10', 'Android >= 4']
+        })
+      ],
       'include css': true
     }))
     .pipe(cleanCSS())

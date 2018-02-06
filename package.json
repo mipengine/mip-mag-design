@@ -4,6 +4,7 @@
   "description": "mag design components",
   "main": "dist/mag-design.min.css",
   "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.8.0",
