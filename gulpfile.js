@@ -41,7 +41,7 @@ gulp.task('iconfont', function () {
   .pipe(iconfont({
     fontName: fontName,
     prependUnicode: true,
-    formats: ['ttf', 'eot', 'woff'],
+    formats: ['ttf', 'eot', 'woff', 'svg'],
     timestamp: runTimestamp,
     normalize: true,
     fontHeight: 1000
@@ -85,7 +85,8 @@ gulp.task('preview', ['build'], function () {
       }
     },
     open: false,
-    port: 8888
+    port: 8888,
+    cors: true
   });
   gulp.watch([paths.src], ['build']);
   gulp.watch([paths.example + '/**']).on("change", browserSync.reload);

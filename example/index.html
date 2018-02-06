@@ -11,13 +11,16 @@
       body {
         max-width: 640px;
         margin: 0 auto;
-        background: #fff;
+        background-color: #fff;
         padding: 5px 12px;
       }
       .demo {
         background: white;
         max-width: 500px;
         margin: 16px auto;
+      }
+      .demo-border {
+        border: 1px solid  #ccc;
       }
       summary > h2 {
         display: inline-block;
@@ -100,14 +103,14 @@
         <p class="no-white-space">
           <span class="tag">标签</span>
           <span class="tag">直角标签</span>
-          <span class="tag">后图标标签 <i class="mag-icon mag-icon-close"></i></span>
-          <span class="tag-virtual tag"><i class="mag-icon mag-icon-add"></i> 新增</span>
+          <span class="tag">后图标标签 <i class="icon icon-close"></i></span>
+          <span class="tag-virtual tag"><i class="icon icon-add"></i> 新增</span>
         </p>
         <p class="no-white-space">
           <span class="rounded tag">标签</span>
           <span class="rounded tag">圆角标签</span>
-          <span class="rounded tag">后图标标签 <i class="mag-icon mag-icon-close"></i></span>
-          <span class="tag-virtual rounded tag"><i class="mag-icon mag-icon-add"></i> 新增</span>
+          <span class="rounded tag">后图标标签 <i class="icon icon-close"></i></span>
+          <span class="tag-virtual rounded tag"><i class="icon icon-add"></i> 新增</span>
         </p>
       </section>
       <h3>颜色标签</h3>
@@ -149,6 +152,23 @@
           <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="rounded tag">单选标签三</span></label>
         </p>
       </section>
+    </details>
+    <details data-mag-component="label">
+      <summary><h2>Label 图标</h2></summary>
+      <p>
+        <span class="label-box label-box-gray">玄幻</span>
+        <span class="label-box label-box-blue">高清</span>
+        <span class="label-box label-box-red">热门</span>
+        <span class="label-box label-box-orange">收费</span>
+        <span class="label-box label-box-green">VIP</span>
+        <span class="label-box label-box-yellow">优惠</span>
+        <span class="label-box label-box-pink">TOP1</span>
+      </p>
+      <p>
+        <span class="label label-info">[标签]</span>
+        <span class="label label-danger">危险</span>
+        <span class="label label-public">官网</span>
+      </p>
     </details>
     <details data-mag-component="button">
       <summary><h2>按钮</h2></summary>
@@ -244,14 +264,14 @@
         <button class="hover btn-outline">线形按钮</button>
       </section>
     </details>
-    <details data-mag-component="details">
+    <details data-mag-component="details" open>
       <summary><h2>展开与收起</h2></summary>
       <mip-showmore bottomshadow='1' maxheight='100' id="showmore">
           MIP HTML 基于HTML中的基础标签制定了全新的规范，通过对一部分基础标签的使用限制或功能扩展，使HTML能够展现更加丰富的内容；MIP JS 可以保证 MIP HTML 页面的快速渲染；MIP Cache 用于实现MIP页面的高速缓存，从而进一步提高页面性能。MIP HTML 基于HTML中的基础标签制定了全新的规范，通过对一部分基础标签的使用限制或功能扩展，使HTML能够展现更加丰富的内容；MIP JS 可以保证 MIP HTML 页面的快速渲染；MIP Cache 用于实现MIP页面的高速缓存，从而进一步提高页面性能。
       </mip-showmore>
       <div on="tap:showmore.toggle" data-closeclass="details-open" class="details">
-        <div class="details-tip-expand">收起</div>
-        <div class="details-tip-close">展开</div>
+        <div class="details-tip-expand">收起<i class="icon icon-collapse"></i></div>
+        <div class="details-tip-close">展开<i class="icon icon-expand"></i></div>
       </div>
     </details>
     <details>
@@ -280,7 +300,7 @@
         >
           <div controller class="audio-player">
             <div play-button class="audio-control">
-              <i class="mag-icon mag-icon-voice"></i>
+              <i class="icon icon-voice"></i>
             </div>
             <div class="audio-body">
               <div class="audio-title">点击播放医生的语音回答</div>
@@ -339,19 +359,75 @@
         </div>
       </section>
     </details>
-    <details data-mag-component="iconfont">
+    <details data-mag-component="iconfont" open>
       <summary><h2>图标</h2></summary>
       <section class="component demo">
-        <i class="mag-icon mag-icon-add"></i>
-        <i class="mag-icon mag-icon-close"></i>
-        <i class="mag-icon mag-icon-collapse"></i>
-        <i class="mag-icon mag-icon-expand"></i>
-        <i class="mag-icon mag-icon-back"></i>
-        <i class="mag-icon mag-icon-fabulous"></i>
-        <i class="mag-icon mag-icon-fabulous-normal"></i>
-        <i class="mag-icon mag-icon-share"></i>
-        <i class="mag-icon mag-icon-search"></i>
-        <i class="mag-icon mag-icon-more"></i>
+        <table>
+          <thead>
+            <tr>
+              <th>图标名称</th>
+              <td>样式</td>
+              <td>代码</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>加</td>
+              <td><i class="icon icon-add"></i></td>
+              <td><code>&lt;i class="icon icon-add"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>关闭</td>
+              <td><i class="icon icon-close"></i></td>
+              <td><code>&lt;i class="icon icon-close"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>向上</td>
+              <td><i class="icon icon-collapse"></i></td>
+              <td><code>&lt;i class="icon icon-collapse"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>向下</td>
+              <td><i class="icon icon-expand"></i></td>
+              <td><code>&lt;i class="icon icon-expand"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>向左</td>
+              <td><i class="icon icon-back"></i></td>
+              <td><code>&lt;i class="icon icon-back"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>向右</td>
+              <td><i class="icon icon-more"></i></td>
+              <td><code>&lt;i class="icon icon-more"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>搜索</td>
+              <td><i class="icon icon-search"></i></td>
+              <td><code>&lt;i class="icon icon-search"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>赞</td>
+              <td><i class="icon icon-fabulous"></i></td>
+              <td><code>&lt;i class="icon icon-fabulous"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>已赞</td>
+              <td><i class="icon icon-fabulous-normal"></i></td>
+              <td><code>&lt;i class="icon icon-fabulous-normal"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>分享</td>
+              <td><i class="icon icon-share"></i></td>
+              <td><code>&lt;i class="icon icon-share"&gt;&lt;/i&gt;</code></td>
+            </tr>
+            <tr>
+              <td>查看更多</td>
+              <td><i class="icon icon-more2"></i></td>
+              <td><code>&lt;i class="icon icon-more2"&gt;&lt;/i&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </details>
     <details open data-mag-component="toast">
@@ -371,11 +447,163 @@
         </mip-toggle>
       </section>
     </details>
-    <!--mip 运行环境-->
-    <script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
-    <script src="https://mipcache.bdstatic.com/static/v1/mip-showmore/mip-showmore.js"></script>
-    <!-- 测试中：mip-audio 组件 -->
-    <script src="https://jennyliang220.github.io/miptests/mip-audio/mip-audio.js"></script>
-    <script src="https://oott123.github.io/sandbox/mip-toggle.js"></script>
+    <details data-mag-component="scrollbox">
+      <summary><h2>图片横滑</h2></summary>
+      <section class="component demo demo-border">
+        <mip-scrollbox data-type="row" class="scrollbox">
+          <div data-wrapper>
+            <div data-inner>
+              <div data-scroller class="flexbox">
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?a"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?b"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?c"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?d"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?e"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?f"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4" class="scrollbox-more">
+                  <a href="https://www.mipengine.org" class="block">
+                    <div>
+                      <i class="icon icon-more2"></i>
+                      <span class="line-clamp1 gap-top">查看更多</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mip-scrollbox>
+      </section>
+      <section class="component demo demo-border">
+        <mip-scrollbox data-type="row" class="scrollbox">
+          <div data-wrapper>
+            <div data-inner>
+              <div data-scroller class="flexbox">
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?a"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?b"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?c"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?d"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?e"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?f"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4" class="scrollbox-more">
+                  <a href="https://www.mipengine.org" class="block">
+                    <div>
+                      <i class="icon icon-more2"></i>
+                      <span class="line-clamp1 gap-top">查看更多</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mip-scrollbox>
+      </section>
+    </details>
+    <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-audio/mip-audio.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-toggle/mip-toggle.js"></script>
   </body>
 </html>

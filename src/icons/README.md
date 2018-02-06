@@ -4,7 +4,7 @@ We are using [gulp-iconfont](https://www.npmjs.com/package/gulp-iconfont) and [g
 
 Normally you can just put svg into [svg](./svg) folder under `src/icons` (details below) and run `gulp iconfont` or build the entire project normally, gulp will generate css files for us.
 
-You can use `.mag-icon-ICONNAME` in your HTML to use iconfont icons, and `ICONNAME` should be replaced by the svg file's basename (the one which don't contains `.svg` extension name).
+You can use `.icon-ICONNAME` in your HTML to use iconfont icons, and `ICONNAME` should be replaced by the svg file's basename (the one which don't contains `.svg` extension name).
 
 ## Add icons
 
@@ -19,7 +19,7 @@ You can use `.mag-icon-ICONNAME` in your HTML to use iconfont icons, and `ICONNA
 
 ### For users
 
-You can just use `<i class="mag-icon mag-icon-${name}">` in HTML.
+You can just use `<i class="icon icon-${name}">` in HTML.
 
 ### For Stylus Developers
 
