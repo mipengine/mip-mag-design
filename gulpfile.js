@@ -69,8 +69,7 @@ gulp.task('build', ['iconfont'], function () {
       import: ['variables', 'mixins'],
       use: [
         autoprefixer({
-          browsers: ['iOS >= 8', 'ie >= 10'],
-          hideWarnings: true
+          browsers: ['iOS >= 8', 'ie >= 10']
         })
       ],
       'include css': true
