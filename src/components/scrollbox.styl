@@ -1,17 +1,18 @@
 @import "../base/variables"
 @import "../base/mixins"
 
+.scrollbox [data-item]
+  text-size small
 .scrollbox a
   +state-active()
     background-color alpha(color-default-fg, 0.04)
 
 .scrollbox-more
   text-align center
-  a
+  .scrollbox-more-wrap
     position relative
     height 100%
-    color alpha(color-default-fg, 0.88)
-  div
+  .scrollbox-more-inner
     position absolute
     left 50%
     top 50%
