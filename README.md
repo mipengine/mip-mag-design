@@ -12,10 +12,10 @@
 
 ### 使用 CDN
 
-说明 | 链接
---- | ---
-大版本号 | <https://c.mipcdn.com/static/mag-design/v2/mag-design.min.css>
-小版本号 | <https://c.mipcdn.com/static/mag-design/2.0.0/mag-design.min.css>
+说明 | 链接 | 备注
+--- | --- | ---
+大版本号 | `https://c.mipcdn.com/static/mag-design/v大版本号/mag-design.min.css` ，如：<br><https://c.mipcdn.com/static/mag-design/v2/mag-design.min.css> | 浏览器过期时间为10分钟
+小版本号 | `https://c.mipcdn.com/static/mag-design/小版本号/mag-design.min.css` ，如：<br><https://c.mipcdn.com/static/mag-design/2.0.0/mag-design.min.css> | 浏览器过期时间为10年
 
 ### npm 安装
 
