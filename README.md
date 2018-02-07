@@ -10,13 +10,12 @@
 
 ## 使用方式
 
-### 使用 unpkg
+### 使用 CDN
 
-```html
-<link rel="stylesheet" type="text/css" src="//unpkg.com/mip-mag-design">
-```
-
-使用 unpkg 即可在开发环境下快速引入 mag-design-mip 的 css 文件。
+说明 | 链接
+--- | ---
+大版本号 | <https://c.mipcdn.com/static/mag-design/v2/mag-design.min.css>
+小版本号 | <https://c.mipcdn.com/static/mag-design/2.0.0/mag-design.min.css>
 
 ### npm 安装
 
