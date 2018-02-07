@@ -7,6 +7,7 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
+const header = require('gulp-header');
 const autoprefixer = require('autoprefixer-stylus');
 const rimraf = require('gulp-rimraf');
 const sourcemaps = require('gulp-sourcemaps');
@@ -17,6 +18,21 @@ const consolidate = require('gulp-consolidate');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const minimist = require('minimist');
+const pkg = require('./package.json');
+
+/**
+ * 编译产出压缩文件头版权
+ *
+ * @type {string}
+ */
+const copyright = [
+  '/*!',
+  ' * Mag-Design v<%=pkg.version%>',
+  ' * Copyright 2017-<%=year%> Baidu, Inc.',
+  ' * Licensed under MIT (https://github.com/mipengine/mip-mag-design)',
+  ' */',
+  ''
+].join('\n');
 
 const runTimestamp = Math.round(Date.now() / 1000);
 const options = minimist(process.argv.slice(2));
@@ -76,6 +92,10 @@ gulp.task('build', ['iconfont'], function () {
     }))
     .pipe(cleanCSS())
     .pipe(rename('mag-design.min.css'))
+    .pipe(header(copyright, {
+      pkg: pkg,
+      year: new Date().getFullYear()
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist))
     .pipe(browserSync.stream());
