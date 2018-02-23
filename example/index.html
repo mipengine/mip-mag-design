@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html mip>
   <head>
@@ -426,11 +427,16 @@
               <td><i class="icon icon-more2"></i></td>
               <td><code>&lt;i class="icon icon-more2"&gt;&lt;/i&gt;</code></td>
             </tr>
+            <tr>
+              <td>向上手指</td>
+              <td><i class="icon icon-finger"></i></td>
+              <td><code>&lt;i class="icon icon-finger"&gt;&lt;/i&gt;</code></td>
+            </tr>
           </tbody>
         </table>
       </section>
     </details>
-    <details open data-mag-component="toast">
+    <details data-mag-component="toast">
       <summary><h2>Toast</h2></summary>
       <section class="component demo">
         <button on="tap:demo-toast.show">Toast</button>
@@ -600,10 +606,90 @@
         </mip-scrollbox>
       </section>
     </details>
+    <details data-mag-component="sidebar" open>
+      <summary><h2>sidebar</h2></summary>
+      <section class="component demo">
+        <button on="tap:sidebar-left.open">打开左侧</button>
+        <button on="tap:sidebar-right.open">打开右侧</button>
+        <mip-sidebar
+          id="sidebar-left"
+          layout="nodisplay"
+          class="mip-hidden">
+          <h1>类目</h1>
+          <h2>商业</h2>
+          <ul>
+            <li>
+              <a href="#">AI</a>
+            </li>
+            <li>
+              <a href="#">教育</a>
+            </li>
+            <li>
+              <a href="#">科技</a>
+            </li>
+            <li>
+              <a href="#">视频</a>
+            </li>
+          </ul>
+          <h2>联系方式</h2>
+          <ul>
+            <li>
+              <a href="#">微博：@MIP</a>
+            </li>
+            <li>
+              <a href="#">QQ：12345678</a>
+            </li>
+          </ul>
+        </mip-sidebar>
+        <mip-sidebar
+          id="sidebar-right"
+          layout="nodisplay"
+          side="right"
+          class="mip-hidden">
+          <h1>菜单</h1>
+          <dl>
+            <dt>
+              <h2>类目</h2>
+            </dt>
+            <dd>
+              <a href="#">AI</a>
+            </dd>
+            <dd>
+              <a href="#">程序程序程序程序程序程序程序，我换行了，支持换行的 A 标签，且是块级的</a>
+            </dd>
+            <dd>
+              <a href="#">科技</a>
+            </dd>
+            <dd>
+              <a href="#">生活</a>
+            </dd>
+            <dt>
+              <h2>联系方式</h2>
+            </dt>
+            <dd>
+              <a href="#">微博：@MIP</a>
+            </dd>
+            <dd>
+              <a href="#">QQ：12345667</a>
+            </dd>
+            <dd>
+              我是普通文字
+            </dd>
+            <dd>
+              我是普通文字2我是普通文字2我是普通文字2我是普通文字2我是普通文字2
+            </dd>
+            <dd>
+              MIP &copy; 2018
+            </dd>
+          </dl>
+        </mip-sidebar>
+      </section>
+    </details>
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-audio/mip-audio.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-toggle/mip-toggle.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-sidebar/mip-sidebar.js"></script>
   </body>
 </html>
