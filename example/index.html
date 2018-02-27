@@ -509,8 +509,8 @@
                   </a>
                 </div>
                 <div data-item data-col="4" class="scrollbox-more">
-                  <a href="https://www.mipengine.org" class="block">
-                    <div>
+                  <a href="https://www.mipengine.org" class="block scrollbox-more-wrap">
+                    <div class="scrollbox-more-inner">
                       <i class="icon icon-more2"></i>
                       <span class="line-clamp1 gap-top">查看更多</span>
                     </div>
@@ -587,12 +587,12 @@
                   </a>
                 </div>
                 <div data-item data-col="4" class="scrollbox-more">
-                  <a href="https://www.mipengine.org" class="block">
-                    <div>
+                  <div class="scrollbox-more-wrap">
+                    <div class="scrollbox-more-inner">
                       <i class="icon icon-more2"></i>
-                      <span class="line-clamp1 gap-top">查看更多</span>
+                      <span class="line-clamp1 gap-top">我不能点击</span>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -600,6 +600,72 @@
         </mip-scrollbox>
       </section>
     </details>
+
+    <details data-mag-component="carousel" open>
+      <summary><h2>轮播图</h2></summary>
+      <section class="component demo">
+        <div class="carousel">
+          <mip-carousel
+            layout="responsive"
+            width="600"
+            height="400"
+            indicatorId="mip-carousel-example">
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://dummyimage.com/600x400" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title1这里是title1这里是title1这里是title1这里是title1</div>
+            </a>
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://www.mipengine.org/static/img/sample_02.jpg" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title2</div>
+            </a>
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://www.mipengine.org/static/img/sample_03.jpg" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title3</div>
+            </a>
+          </mip-carousel>
+
+          <div class="carousel-dot" id="mip-carousel-example">
+            <i class="mip-carousel-activeitem"></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <details data-mag-component="loading" open>
+      <summary><h2>加载</h2></summary>
+      <section class="component demo">
+        <h3>加载图标</h3>
+        <p>
+          <span class="loading">
+            <i class="loading-icon"></i>
+          </span>
+        </p>
+      </section>
+
+      <section class="component demo">
+        <h3>加载图标和文字</h3>
+        <p>
+          <span class="loading">
+            <i class="loading-icon gap-right-small"></i><span>加载中...</span>
+          </span>
+        </p>
+      </section>
+    </details>
+
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
