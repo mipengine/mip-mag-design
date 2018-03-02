@@ -69,7 +69,7 @@ gulp.task('build', ['iconfont'], function () {
             ],
             'include css': true
         }))
-        // .pipe(cleanCSS())
+        .pipe(cleanCSS())
         .pipe(rename('mag-design.min.css'))
         .pipe(header(copyright, {
             pkg: pkg,
