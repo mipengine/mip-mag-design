@@ -18,9 +18,8 @@
     i
       font-size 0.42rem
       line-height 0.36rem
-      font-icon 'voice-frame-3'
     &.mip-audio-playing-icon i::before
-      font-icon-content 'voice-frame-1'
+      content "\e693"
       animation 1.5s linear infinite mag--audio-playing
   .audio-body
     flex 1
@@ -46,10 +45,10 @@
 // playing animation
 @keyframes mag--audio-playing
   0%
-    font-icon-content 'voice-frame-1'
+    content "\e693"
   33.33%
-    font-icon-content 'voice-frame-2'
+    content "\e694"
   66%
-    font-icon-content 'voice-frame-3'
+    content "\e692"
   100%
-    font-icon-content 'voice-frame-1'
+    content "\e693"
