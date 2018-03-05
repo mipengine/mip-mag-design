@@ -1,0 +1,38 @@
+.loading
+  display inline-block
+  transition-timing-function cubic-bezier(0.1, 0.57, 0.1, 1)
+  transition-duration 0ms
+  transform translateZ(0)
+
+  .loading-icon
+    width .13rem
+    height .13rem
+    border-radius 50%
+    display inline-block
+    vertical-align middle
+    background-color #2a2a31
+    opacity .3
+    animation mag-loading-ani 750ms
+    animation-timing-function linear
+    animation-iteration-count infinite
+
+@keyframes mag-loading-ani {
+  from {
+    opacity .3
+    transform rotateY(0deg)
+  }
+  40% {
+    transform rotateY(90deg)
+  }
+  50% {
+    opacity .6
+    transform rotateY(180deg)
+  }
+  60% {
+    transform rotateY(270deg)
+  }
+  to {
+    opacity .3
+    transform rotateY(360deg)
+  }
+}

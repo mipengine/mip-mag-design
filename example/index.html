@@ -40,6 +40,12 @@
         vertical-align: middle;
         margin: 8px 16px;
       }
+      .icon {
+        font-size: 30px;
+      }
+      [data-mag-component="iconfont"] tr {
+        line-height: 30px;
+      }
     </style>
   </head>
   <body>
@@ -271,8 +277,8 @@
           MIP HTML 基于HTML中的基础标签制定了全新的规范，通过对一部分基础标签的使用限制或功能扩展，使HTML能够展现更加丰富的内容；MIP JS 可以保证 MIP HTML 页面的快速渲染；MIP Cache 用于实现MIP页面的高速缓存，从而进一步提高页面性能。MIP HTML 基于HTML中的基础标签制定了全新的规范，通过对一部分基础标签的使用限制或功能扩展，使HTML能够展现更加丰富的内容；MIP JS 可以保证 MIP HTML 页面的快速渲染；MIP Cache 用于实现MIP页面的高速缓存，从而进一步提高页面性能。
       </mip-showmore>
       <div on="tap:showmore.toggle" data-closeclass="details-open" class="details">
-        <div class="details-tip-expand">收起<i class="icon icon-collapse"></i></div>
-        <div class="details-tip-close">展开<i class="icon icon-expand"></i></div>
+        <div class="details-tip-expand">收起<i class="icon icon-up"></i></div>
+        <div class="details-tip-close">展开<i class="icon icon-down"></i></div>
       </div>
     </details>
     <details>
@@ -366,9 +372,10 @@
         <table>
           <thead>
             <tr>
-              <th>图标名称</th>
-              <td>样式</td>
-              <td>代码</td>
+              <th width="100">图标名称</th>
+              <th width="100">样式</th>
+              <th>代码</th>
+              <th>unicode</th>
             </tr>
           </thead>
           <tbody>
@@ -376,56 +383,163 @@
               <td>加</td>
               <td><i class="icon icon-add"></i></td>
               <td><code>&lt;i class="icon icon-add"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe690;</td>
             </tr>
             <tr>
               <td>关闭</td>
               <td><i class="icon icon-close"></i></td>
               <td><code>&lt;i class="icon icon-close"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe691;</td>
             </tr>
             <tr>
               <td>向上</td>
-              <td><i class="icon icon-collapse"></i></td>
-              <td><code>&lt;i class="icon icon-collapse"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-up"></i></td>
+              <td><code>&lt;i class="icon icon-up"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68f;</td>
             </tr>
             <tr>
               <td>向下</td>
-              <td><i class="icon icon-expand"></i></td>
-              <td><code>&lt;i class="icon icon-expand"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-down"></i></td>
+              <td><code>&lt;i class="icon icon-down"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68e;</td>
             </tr>
             <tr>
               <td>向左</td>
-              <td><i class="icon icon-back"></i></td>
-              <td><code>&lt;i class="icon icon-back"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-left"></i></td>
+              <td><code>&lt;i class="icon icon-left"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68d;</td>
             </tr>
             <tr>
               <td>向右</td>
-              <td><i class="icon icon-more"></i></td>
-              <td><code>&lt;i class="icon icon-more"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-right"></i></td>
+              <td><code>&lt;i class="icon icon-right"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe688;</td>
             </tr>
             <tr>
               <td>搜索</td>
               <td><i class="icon icon-search"></i></td>
               <td><code>&lt;i class="icon icon-search"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe687;</td>
             </tr>
             <tr>
               <td>赞</td>
-              <td><i class="icon icon-fabulous"></i></td>
-              <td><code>&lt;i class="icon icon-fabulous"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-fabulous_normal"></i></td>
+              <td><code>&lt;i class="icon icon-fabulous_normal"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68c;</td>
             </tr>
             <tr>
               <td>已赞</td>
-              <td><i class="icon icon-fabulous-normal"></i></td>
-              <td><code>&lt;i class="icon icon-fabulous-normal"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-fabulous"></i></td>
+              <td><code>&lt;i class="icon icon-fabulous"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68a;</td>
             </tr>
             <tr>
               <td>分享</td>
               <td><i class="icon icon-share"></i></td>
               <td><code>&lt;i class="icon icon-share"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68b;</td>
             </tr>
             <tr>
               <td>查看更多</td>
-              <td><i class="icon icon-more2"></i></td>
-              <td><code>&lt;i class="icon icon-more2"&gt;&lt;/i&gt;</code></td>
+              <td><i class="icon icon-more"></i></td>
+              <td><code>&lt;i class="icon icon-more"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe689;</td>
+            </tr>
+            <tr>
+              <td>留言评论</td>
+              <td><i class="icon icon-comment"></i></td>
+              <td><code>&lt;i class="icon icon-comment"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe686;</td>
+            </tr>
+            <tr>
+              <td>播放</td>
+              <td><i class="icon icon-play"></i></td>
+              <td><code>&lt;i class="icon icon-play"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe682;</td>
+            </tr>
+            <tr>
+              <td>菜单项</td>
+              <td><i class="icon icon-menu"></i></td>
+              <td><code>&lt;i class="icon icon-menu"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe680;</td>
+            </tr>
+            <tr>
+              <td>菜单列表</td>
+              <td><i class="icon icon-menulist"></i></td>
+              <td><code>&lt;i class="icon icon-menulist"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe681;</td>
+            </tr>
+            <tr>
+              <td>书签</td>
+              <td><i class="icon icon-mybook"></i></td>
+              <td><code>&lt;i class="icon icon-mybook"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67f;</td>
+            </tr>
+            <tr>
+              <td>日间模式</td>
+              <td><i class="icon icon-day"></i></td>
+              <td><code>&lt;i class="icon icon-day"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67e;</td>
+            </tr>
+            <tr>
+              <td>夜间模式</td>
+              <td><i class="icon icon-night"></i></td>
+              <td><code>&lt;i class="icon icon-night"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67b;</td>
+            </tr>
+            <tr>
+              <td>排序</td>
+              <td><i class="icon icon-order"></i></td>
+              <td><code>&lt;i class="icon icon-order"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67a;</td>
+            </tr>
+            <tr>
+              <td>触摸</td>
+              <td><i class="icon icon-finger"></i></td>
+              <td><code>&lt;i class="icon icon-finger"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67c;</td>
+            </tr>
+            <tr>
+              <td>字体</td>
+              <td><i class="icon icon-font"></i></td>
+              <td><code>&lt;i class="icon icon-font"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67d;</td>
+            </tr>
+            <tr>
+              <td>熊掌</td>
+              <td><i class="icon icon-logo"></i></td>
+              <td><code>&lt;i class="icon icon-logo"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe685;</td>
+            </tr>
+            <tr>
+              <td>指南针</td>
+              <td><i class="icon icon-compass"></i></td>
+              <td><code>&lt;i class="icon icon-compass"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe695;</td>
+            </tr>
+            <tr>
+              <td>GitHub</td>
+              <td><i class="icon icon-github"></i></td>
+              <td><code>&lt;i class="icon icon-github"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe696;</td>
+            </tr>
+            <tr>
+              <td>组件</td>
+              <td><i class="icon icon-components"></i></td>
+              <td><code>&lt;i class="icon icon-components"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe697;</td>
+            </tr>
+            <tr>
+              <td>MIP</td>
+              <td><i class="icon icon-mip"></i></td>
+              <td><code>&lt;i class="icon icon-mip"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe698;</td>
+            </tr>
+            <tr>
+              <td>代码</td>
+              <td><i class="icon icon-code"></i></td>
+              <td><code>&lt;i class="icon icon-code"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe69a;</td>
             </tr>
             <tr>
               <td>向上手指</td>
@@ -515,9 +629,9 @@
                   </a>
                 </div>
                 <div data-item data-col="4" class="scrollbox-more">
-                  <a href="https://www.mipengine.org" class="block">
-                    <div>
-                      <i class="icon icon-more2"></i>
+                  <a href="https://www.mipengine.org" class="block scrollbox-more-wrap">
+                    <div class="scrollbox-more-inner">
+                      <i class="icon icon-more"></i>
                       <span class="line-clamp1 gap-top">查看更多</span>
                     </div>
                   </a>
@@ -593,12 +707,12 @@
                   </a>
                 </div>
                 <div data-item data-col="4" class="scrollbox-more">
-                  <a href="https://www.mipengine.org" class="block">
-                    <div>
-                      <i class="icon icon-more2"></i>
-                      <span class="line-clamp1 gap-top">查看更多</span>
+                  <div class="scrollbox-more-wrap">
+                    <div class="scrollbox-more-inner">
+                      <i class="icon icon-more"></i>
+                      <span class="line-clamp1 gap-top">我不能点击</span>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -685,6 +799,72 @@
         </mip-sidebar>
       </section>
     </details>
+
+    <details data-mag-component="carousel" open>
+      <summary><h2>轮播图</h2></summary>
+      <section class="component demo">
+        <div class="carousel">
+          <mip-carousel
+            layout="responsive"
+            width="600"
+            height="400"
+            indicatorId="mip-carousel-example">
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://dummyimage.com/600x400" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title1这里是title1这里是title1这里是title1这里是title1</div>
+            </a>
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://www.mipengine.org/static/img/sample_02.jpg" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title2</div>
+            </a>
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://www.mipengine.org/static/img/sample_03.jpg" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title3</div>
+            </a>
+          </mip-carousel>
+
+          <div class="carousel-dot" id="mip-carousel-example">
+            <i class="mip-carousel-activeitem"></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <details data-mag-component="loading" open>
+      <summary><h2>加载</h2></summary>
+      <section class="component demo">
+        <h3>加载图标</h3>
+        <p>
+          <span class="loading">
+            <i class="loading-icon"></i>
+          </span>
+        </p>
+      </section>
+
+      <section class="component demo">
+        <h3>加载图标和文字</h3>
+        <p>
+          <span class="loading">
+            <i class="loading-icon gap-right-small"></i><span>加载中...</span>
+          </span>
+        </p>
+      </section>
+    </details>
+
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
