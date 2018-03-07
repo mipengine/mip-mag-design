@@ -4,31 +4,36 @@
 mip-sidebar
   background-color color-default-bg
   width 65% !important
-  padding-left .26rem
+  padding-left .28rem
   padding-right .26rem
-  a
-    display block
-    +state-active()
-      background-color alpha(color-default-fg, 0.04)
-  ul,
-  ol
+  > ul
     list-style none
-  li,
-  dd
-    line-height .3rem
-    padding-top .1rem
-    padding-bottom .1rem
-  h2,
-  h3,
-  dt
-    line-height .3rem
-    margin-top .3rem
+    padding-top .28rem
+    padding-bottom .28rem
+    margin-left -.24rem
+    margin-right -.24rem
+    a
+      height .48rem
+      line-height .48rem
+      display block
+      padding-left .28rem
+      padding-right .28rem
+      color rgba(color-default-fg, .56)
+      &.active
+        color rgba(color-default-fg, .88)
+      +state-active()
+        background-color alpha(color-default-fg, 0.04)
+    ul
+      a
+        padding-left .44rem
+      ul
+        a
+          padding-left .60rem
 
 .MIP-SIDEBAR-MASK
   &:after,
   &:before
     opacity 0
-    transition opacity .2s ease-in
     width 35%
     right 0
     top 50%
@@ -39,18 +44,20 @@ mip-sidebar
     color color-default-bg
     text-size small
   &:after
-    padding-top 20px
+    padding-top .2rem
   &:before
-    margin-top -20px
+    margin-top -.2rem
     font-size .24rem
-    content "\EA0F"
+    content "\e67c"
     font-family mag-icon
   &[data-side="right"]
     &:after,
     &:before
       right auto
       left 0
-  &[show]
+  &[open]
+    background-color rgba(color-default-fg, .7)
     &:after,
     &:before
+      transition opacity .2s ease-in .3s
       opacity 1
