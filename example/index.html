@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html mip>
   <head>
@@ -391,6 +392,12 @@
               <td>&amp;#xe691;</td>
             </tr>
             <tr>
+              <td>关闭-线型</td>
+              <td><i class="icon icon-close1"></i></td>
+              <td><code>&lt;i class="icon icon-close1"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe699;</td>
+            </tr>
+            <tr>
               <td>向上</td>
               <td><i class="icon icon-up"></i></td>
               <td><code>&lt;i class="icon icon-up"&gt;&lt;/i&gt;</code></td>
@@ -540,11 +547,16 @@
               <td><code>&lt;i class="icon icon-code"&gt;&lt;/i&gt;</code></td>
               <td>&amp;#xe69a;</td>
             </tr>
+            <tr>
+              <td>向上手指</td>
+              <td><i class="icon icon-finger"></i></td>
+              <td><code>&lt;i class="icon icon-finger"&gt;&lt;/i&gt;</code></td>
+            </tr>
           </tbody>
         </table>
       </section>
     </details>
-    <details open data-mag-component="toast">
+    <details data-mag-component="toast">
       <summary><h2>Toast</h2></summary>
       <section class="component demo">
         <button on="tap:demo-toast.show">Toast</button>
@@ -714,6 +726,64 @@
         </mip-scrollbox>
       </section>
     </details>
+    <details data-mag-component="sidebar" open>
+      <summary><h2>sidebar</h2></summary>
+      <section class="component demo">
+        <button on="tap:sidebar-left.open">打开左侧</button>
+        <button on="tap:sidebar-right.open">打开右侧</button>
+        <mip-sidebar
+          id="sidebar-left"
+          layout="nodisplay"
+          class="mip-hidden">
+          <ul>
+            <li><a href="#" class="active">首页</a></li>
+            <li>
+              <a href="#">模板</a>
+              <ul>
+                <li><a href="#">小说</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">博客</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">组件</a>
+              <ul>
+                <li><a href="#">按钮</a></li>
+                <li><a href="#">栅格化</a></li>
+                <li>
+                  <a href="#">提示</a>
+                  <ul>
+                    <li><a href="#">按钮</a></li>
+                    <li><a href="#">栅格化</a></li>
+                    <li><a href="#">提示</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">使用指南</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </mip-sidebar>
+        <mip-sidebar
+          id="sidebar-right"
+          layout="nodisplay"
+          side="right"
+          class="mip-hidden">
+          <h1>菜单</h1>
+          <h2>类目</h2>
+          <p>
+            <a href="#">AI</a>
+          </p>
+          <p>
+            <a href="#">程序程序程序程序程序程序程序，我换行了，支持换行的 A 标签，且是块级的</a>
+          </p>
+          <p>
+            MIP &copy; 2018
+          </p>
+        </mip-sidebar>
+      </section>
+    </details>
 
     <details data-mag-component="carousel" open>
       <summary><h2>轮播图</h2></summary>
@@ -785,5 +855,6 @@
     <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-audio/mip-audio.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-toggle/mip-toggle.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-sidebar/mip-sidebar.js"></script>
   </body>
 </html>
