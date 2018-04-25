@@ -1,0 +1,31 @@
+@require "./variables/color"
+
+primary-color-name = 'cyan'
+accent-color-name = 'teal'
+
+color-primary = colors[primary-color-name]
+color-accent = colors[accent-color-name]
+color-primary-default = color-primary[7]
+color-accent-default = color-accent[7]
+colors['primary'] = color-primary
+colors['accent'] = color-accent
+
+// font-sizes[0..10] for 11 font sizes
+// 0 = 12, 1 = 14, 2 = 16, 3 = 18
+font-sizes-numeric = 12px
+for i in (1..10)
+  push(font-sizes-numeric, font-sizes-numeric[0] + (2*i))
+
+font-sizes = {
+  xs: font-sizes-numeric[0],
+  s: font-sizes-numeric[1],
+  small: font-sizes-numeric[1],
+  m: font-sizes-numeric[2],
+  middle: font-sizes-numeric[2],
+  l: font-sizes-numeric[3],
+  large: font-sizes-numeric[3],
+  title-s: font-sizes-numeric[3],
+  title-m: font-sizes-numeric[4],
+  title-l: font-sizes-numeric[5],
+  title-xl: font-sizes-numeric[6]
+}

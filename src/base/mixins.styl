@@ -1,0 +1,15 @@
+text-size(size)
+  font-size font-sizes[size]
+
+state-active()
+  a:active &, &:active, .hover-enabled a:active &, .hover-enabled &:active
+    {block}
+
+state-hover()
+  .hover-enabled a:hover &, .hover-enabled &:hover, &.hover
+    {block}
+
+state-disabled()
+  &.disabled, &:disabled
+    pointer-events none
+    {block}

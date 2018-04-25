@@ -1,0 +1,54 @@
+.audio-player
+  width 100%
+  border solid 0.01rem #e9e9e9
+  background-color #fcfcfc
+  border-radius 0.03rem
+  display flex
+  .audio-control
+    display flex
+    justify-content center
+    align-items center
+    width 0.4rem
+    height @width
+    margin 0.16rem
+    border 0.02rem solid color-primary-default
+    color color-primary-default
+    border-radius 999rem
+    overflow hidden
+    i
+      font-size 0.42rem
+      line-height 0.36rem
+    &.mip-audio-playing-icon i::before
+      content "\e693"
+      animation 1.5s linear infinite mag--audio-playing
+  .audio-body
+    flex 1
+    display flex
+    flex-direction column
+    justify-content center
+    margin-right 0.16rem
+    text-size 's'
+    line-height 0.8
+    .audio-seekbar
+      background-color #ebebeb
+      width 100%
+      height 0.02rem
+      margin 0.1rem 0
+      .audio-seekbar-fill
+        height 100%
+        width 0%
+        background-color color-primary-default
+    .audio-progress
+      display flex
+      justify-content space-between
+      color #999
+// playing animation
+@keyframes mag--audio-playing
+  0%
+    content "\e693"
+  33.33%
+    content "\e694"
+  66%
+    content "\e692"
+  100%
+    content "\e693"

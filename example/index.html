@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html mip>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <link rel="stylesheet" type="text/css" href="../dist/mag-design.min.css">
+    <link rel="canonical" href="https://m.baidu.com/demo.html">
+    <title>mag-design components demo</title>
+    <style mip-custom>
+      body {
+        max-width: 640px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 5px 12px;
+      }
+      .demo {
+        background: white;
+        max-width: 500px;
+        margin: 16px auto;
+      }
+      .demo-border {
+        border: 1px solid  #ccc;
+      }
+      summary > h2 {
+        display: inline-block;
+      }
+      .__demo-outline-orange {
+        outline: orange 1px dashed;
+      }
+      .__demo-outline-green {
+        outline: green 1px dashed;
+      }
+      .__demo_placeholder {
+        width: 120px;
+        height: 64px;
+        background: #ccc;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 8px 16px;
+      }
+      .icon {
+        font-size: 30px;
+      }
+      [data-mag-component="iconfont"] tr {
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--自定义样式-->
+    <h1>Mag Design</h1>
+    <details data-mag-component="typography">
+      <summary><h2>排版和通用类</h2></summary>
+      <h3>标题</h3>
+      <section class="component demo">
+        <p>使用 h1~h4 来申明标题</p>
+        <h1>一级标题</h1>
+        <h2>二级标题</h2>
+        <h3>三级标题</h3>
+        <h4>四级标题</h4>
+        <p>普通文本</p>
+        <p class="subtitle">副标题</p>
+      </section>
+      <h3>设定文本尺寸</h3>
+      <section class="component demo">
+        <p>
+          <span class="font-size-xs">超小辅助文本</span>
+          <span class="font-size-s">辅助文本</span>
+          <span class="font-size-title-s">小标题大小的文本</span>
+          <span class="font-size-title-m">中标题大小的文本</span>
+          <span class="font-size-title-l">大标题大小的文本</span>
+          <span class="font-size-title-xl">超大标题大小的文本</span>
+        </p>
+      </section>
+      <h3>使用具体尺寸</h3>
+      <section class="component demo">
+        <p>
+          <span class="font-size-0">0级尺寸文本</span>
+          <span class="font-size-5">5级尺寸文本</span>
+          <span class="font-size-8">8级尺寸文本</span>
+          <span class="font-size-10">10级尺寸文本</span>
+        </p>
+      </section>
+      <h3>主题颜色</h3>
+      <section class="component demo">
+        <p>
+          <span class="fg-primary">主题色</span>
+          <span class="bg-primary">主题背景色</span>
+          <span class="fg-accent">次要色</span>
+          <span class="bg-accent">次要背景色</span>
+        </p>
+      </section>
+      <h3>具体颜色</h3>
+      <section class="component demo">
+        <p>
+          <span class="bg-blue">设置元素背景色</span>
+          <span class="fg-blue">设置文字前景色</span>
+          <span class="bg-yellow-2">设置不同深浅的颜色</span>
+        </p>
+      </section>
+    </details>
+    <details data-mag-component="tag">
+      <summary><h2>Tag 标签</h2></summary>
+      <p>进行标记和分类的小标签，用于标记事务的属性和维度。</p>
+      <h3>常规标签</h3>
+      <p>基础标签，可以通过添加关闭图标变为可关闭标签，也可以作为一组标签使用，可以动态添加和删除。</p>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="tag">标签</span>
+          <span class="tag">直角标签</span>
+          <span class="tag">后图标标签 <i class="icon icon-close"></i></span>
+          <span class="tag-virtual tag"><i class="icon icon-add"></i> 新增</span>
+        </p>
+        <p class="no-white-space">
+          <span class="rounded tag">标签</span>
+          <span class="rounded tag">圆角标签</span>
+          <span class="rounded tag">后图标标签 <i class="icon icon-close"></i></span>
+          <span class="tag-virtual rounded tag"><i class="icon icon-add"></i> 新增</span>
+        </p>
+      </section>
+      <h3>颜色标签</h3>
+      <p>允许多色彩标签的样式，颜色可以从色版中选择。</p>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="bg-orange tag-fill tag">橙色</span>
+          <span class="bg-red tag-fill tag">红色</span>
+          <span class="bg-blue rounded tag-fill tag">圆角</span>
+          <span class="bg-violet rounded tag-fill tag">也可以</span>
+        </p>
+      </section>
+      <h3>热门标签</h3>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="tag-plain tag-title tag">热门关键词:</span>
+          <span class="tag-plain tag">刘德华</span>
+          <span class="tag-plain active tag">梅艳芳</span>
+          <span class="tag-plain tag">周迅</span>
+          <span class="tag-plain tag">赵薇</span>
+        </p>
+      </section>
+      <h3>可选择标签</h3>
+      <p>点击切换选中效果</p>
+      <section class="component demo">
+        <p class="no-white-space">
+          <span class="active tag">选中的标签</span>
+          <span class="rounded active tag">选中的圆角标签</span>
+          <span class="tag-fill bg-red rounded active tag">选中的涂色标签</span>
+        </p>
+        <p class="no-white-space">
+          <label><input type="checkbox" class="for-tag"><span class="tag">复选标签一</span></label>
+          <label><input type="checkbox" class="for-tag"><span class="tag">标签二</span></label>
+          <label><input type="checkbox" class="for-tag"><span class="tag">标签三</span></label>
+        </p>
+        <p class="no-white-space">
+          <label><input type="radio" checked name="demo-tag-1" class="for-tag"><span  class="rounded tag">标签一</span></label>
+          <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="bg-orange  tag-fill rounded tag">单选标签二</span></label>
+          <label><input type="radio" name="demo-tag-1" class="for-tag"><span class="rounded tag">单选标签三</span></label>
+        </p>
+      </section>
+    </details>
+    <details data-mag-component="label">
+      <summary><h2>Label 图标</h2></summary>
+      <p>
+        <span class="label-box label-box-gray">玄幻</span>
+        <span class="label-box label-box-blue">高清</span>
+        <span class="label-box label-box-red">热门</span>
+        <span class="label-box label-box-orange">收费</span>
+        <span class="label-box label-box-green">VIP</span>
+        <span class="label-box label-box-yellow">优惠</span>
+        <span class="label-box label-box-pink">TOP1</span>
+      </p>
+      <p>
+        <span class="label label-info">[标签]</span>
+        <span class="label label-danger">危险</span>
+        <span class="label label-public">官网</span>
+      </p>
+    </details>
+    <details data-mag-component="button">
+      <summary><h2>按钮</h2></summary>
+      <p>按钮表示一定的用户行为，通常为点击行为。</p>
+      <h3>文字按钮</h3>
+      <p>中文因为没有大小写之分，所以文字按钮需要在颜色上进行区分。</p>
+      <section class="component demo">
+        <span class="btn btn-link">示例按钮</span>
+        <span class="btn btn-link btn-accent">示例按钮</span>
+      </section>
+      <h3>线型按钮</h3>
+      <p>对于 <code>&lt;button&gt;</code> 标签而言，不需要增加 <code>btn</code> 类。</p>
+      <section class="component demo">
+        <span class="btn btn-outline">示例按钮</span>
+        <button class="btn-outline btn-accent">示例按钮</button>
+        <button class="btn-outline" disabled>示例按钮</button>
+      </section>
+      <h3>实体按钮</h3>
+      <section class="component demo">
+        <button>示例按钮</button>
+        <button class="btn-accent">示例按钮</button>
+        <button disabled>示例按钮</button>
+        <button disabled class="btn-accent">示例按钮</button>
+      </section>
+      <h3>胶囊按钮</h3>
+      <section class="component demo">
+        <button class="btn-pill">胶囊按钮</button>
+        <button class="btn-outline btn-pill">示例按钮</button>
+        <button disabled class="btn-pill">示例按钮</button>
+        <button disabled class="btn-outline btn-pill">示例按钮</button>
+        <button class="btn-pill btn-accent">示例按钮</button>
+        <button class="btn-outline btn-pill btn-accent">示例按钮</button>
+        <button disabled class="btn-pill btn-accent">示例按钮</button>
+        <button disabled class="btn-outline btn-pill btn-accent">示例按钮</button>
+      </section>
+      <h3>尺寸</h3>
+      <section class="component demo">
+        <p>
+          <a class="btn btn-block">块级按钮</a><br>
+          <button class="btn-block btn-pill">块级按钮</button><br>
+          <button class="btn-block btn-outline">块级按钮</button><br>
+          <button class="btn-block btn-accent">块级按钮</button><br>
+          <button class="btn-big btn-block">块级大按钮</button><br>
+          <button class="btn-big btn-accent btn-block">块级大按钮</button><br>
+          <button class="btn-big btn-accent btn-pill btn-block">块级大按钮</button><br>
+        </p>
+        <p>
+          <button class="btn-tiny">Tiny 尺寸</button>
+          <button class="btn-small">Small 尺寸</button>
+          <button>标准尺寸</button>
+          <button class="btn-tiny btn-accent btn-pill">Tiny 尺寸</button>
+          <button class="btn-small btn-accent btn-outline">Small 尺寸</button>
+          <button class="btn btn-outline btn-accent btn-pill">标准尺寸</button>
+        </p>
+      </section>
+      <h3>点击区域和点击态</h3>
+      <p>在下方的 demo 中增加了橙色和绿色辅助线，方便观察行为。橙色表示可点区域，绿色表示 UI 反应实际区域。</p>
+      <section class="component demo">
+        <p class="no-white-space">
+            <a href="javascript:;" class="__demo-outline-orange">
+              <button class="btn __demo-outline-green">实体按钮</button>
+            </a>
+            <span>&nbsp;&nbsp;</span>
+            <a href="javascript:;" class="__demo-outline-orange">
+              <span class="btn btn-link __demo-outline-green">文本按钮</span>
+            </a>
+            <span>&nbsp;&nbsp;</span>
+            <a href="javascript:;" class="__demo-outline-orange">
+              <span class="btn btn-outline btn-link __demo-outline-green">线形按钮</span>
+            </a>
+        </p>
+      </section>
+      <p>由于移动端通常不使用 hover 特效，如果需要 hover 的效果，需要在祖先 DOM 上增加 class <code>hover-enabled</code>。</p>
+      <section class="component demo">
+        <p class="no-white-space hover-enabled">
+          <a href="javascript:;">
+            <button class="btn">实体按钮</button>
+          </a>
+          <span>&nbsp;&nbsp;</span>
+          <a href="javascript:;">
+            <span class="btn btn-link">文本按钮</span>
+          </a>
+          <span>&nbsp;&nbsp;</span>
+          <a href="javascript:;">
+            <span class="btn btn-outline">线形按钮</span>
+          </a>
+        </p>
+      </section>
+      <p>使用 .hover 类也可以手动增加 hover 效果，适用于 loading 等场景。</p>
+      <section class="component demo">
+        <button class="hover">实体按钮</button>
+        <button class="hover btn-link">文本按钮</button>
+        <button class="hover btn-outline">线形按钮</button>
+      </section>
+    </details>
+    <details data-mag-component="details" open>
+      <summary><h2>展开与收起</h2></summary>
+      <mip-showmore bottomshadow='1' maxheight='100' id="showmore">
+          MIP HTML 基于HTML中的基础标签制定了全新的规范，通过对一部分基础标签的使用限制或功能扩展，使HTML能够展现更加丰富的内容；MIP JS 可以保证 MIP HTML 页面的快速渲染；MIP Cache 用于实现MIP页面的高速缓存，从而进一步提高页面性能。MIP HTML 基于HTML中的基础标签制定了全新的规范，通过对一部分基础标签的使用限制或功能扩展，使HTML能够展现更加丰富的内容；MIP JS 可以保证 MIP HTML 页面的快速渲染；MIP Cache 用于实现MIP页面的高速缓存，从而进一步提高页面性能。
+      </mip-showmore>
+      <div on="tap:showmore.toggle" data-closeclass="details-open" class="details">
+        <div class="details-tip-expand">收起<i class="icon icon-up"></i></div>
+        <div class="details-tip-close">展开<i class="icon icon-down"></i></div>
+      </div>
+    </details>
+    <details>
+      <summary><h2>分隔线</h2></summary>
+      <h3>下面为默认分割线，默认8%黑色</h3>
+      <hr>
+      <h3>接下来是8%白色</h3>
+      <div class="bg-primary">
+          <p>白色分隔线之上部分</p>
+          <hr class="hr-white">
+          <p>白色分隔线之下部分</p>
+      </div>
+      <h3>适用于卡片的4pt分隔线</h3>
+      <hr class="hr-l">
+      <h3>适用于卡片的8pt分隔线</h3>
+      <hr class="hr-xl">
+
+    </details>
+    <details>
+      <summary><h2>播放控件</h2></summary>
+      <section class="component demo">
+        <mip-audio
+          src="https://mip-doc.bj.bcebos.com/guitar.mp3"
+          controls
+          layout="container"
+        >
+          <div controller class="audio-player">
+            <div play-button class="audio-control">
+              <i class="icon icon-voice"></i>
+            </div>
+            <div class="audio-body">
+              <div class="audio-title">点击播放医生的语音回答</div>
+              <div seekbar class="audio-seekbar">
+                <div seekbar-fill class="audio-seekbar-fill"></div>
+                <div seekbar-button class="hidden"></div>
+              </div>
+              <div class="audio-progress">
+                <div current-time class="audio-time-current">00:00</div>
+                <div total-time class="audio-time-total">--:--</div>
+              </div>
+            </div>
+          </div>
+        </mip-audio>
+      </section>
+    </details>
+    <details data-mag-component="badge">
+      <summary><h2>徽章</h2></summary>
+      <h3>与文字一起使用</h3>
+      <section class="component demo">
+        <h3>示例文字 <span class="badge">NEW</span></h3>
+        <h4>示例文字 <span class="badge">NEW</span></h4>
+        <p>
+          <div class="badge badge-round">5</div>
+          <div class="badge badge-round badge-outline">8</div>
+          <div class="badge bg-accent">255</div>
+          <div class="badge bg-primary">16</div>
+          <div class="badge bg-green">OK</div>
+          <div class="badge badge-point"></div>
+        </p>
+      </section>
+      <h3>放在元素的右上角</h3>
+      <div class="component demo">
+        <div class="__demo_placeholder badge-container">
+          <div class="badge">99+</div>
+        </div>
+        <div class="__demo_placeholder badge-container">
+          <div class="badge badge-point"></div>
+        </div>
+      </div>
+    </details>
+    <details data-mag-component="badge">
+      <summary><h2>提示</h2></summary>
+      <h3>提示条</h3>
+      <section class="component demo">
+        <div class="infobar">我是一个贯穿通栏的信息条</div>
+      </section>
+      <h3>工具提示</h3>
+      <section class="component demo">
+        <div class="tooltip-container tooltip-show" style="margin: 40px 120px;">
+          Lorem ipsum
+          <div class="tooltip tooltip-left">我在左边</div>
+          <div class="tooltip tooltip-right">我在右边</div>
+          <div class="tooltip tooltip-top">我在上面</div>
+          <div class="tooltip tooltip-bottom">我在下面</div>
+        </div>
+      </section>
+    </details>
+    <details data-mag-component="iconfont" open>
+      <summary><h2>图标</h2></summary>
+      <section class="component demo">
+        <table>
+          <thead>
+            <tr>
+              <th width="100">图标名称</th>
+              <th width="100">样式</th>
+              <th>代码</th>
+              <th>unicode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>加</td>
+              <td><i class="icon icon-add"></i></td>
+              <td><code>&lt;i class="icon icon-add"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe690;</td>
+            </tr>
+            <tr>
+              <td>关闭</td>
+              <td><i class="icon icon-close"></i></td>
+              <td><code>&lt;i class="icon icon-close"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe691;</td>
+            </tr>
+            <tr>
+              <td>关闭-线型</td>
+              <td><i class="icon icon-close1"></i></td>
+              <td><code>&lt;i class="icon icon-close1"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe699;</td>
+            </tr>
+            <tr>
+              <td>向上</td>
+              <td><i class="icon icon-up"></i></td>
+              <td><code>&lt;i class="icon icon-up"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68f;</td>
+            </tr>
+            <tr>
+              <td>向下</td>
+              <td><i class="icon icon-down"></i></td>
+              <td><code>&lt;i class="icon icon-down"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68e;</td>
+            </tr>
+            <tr>
+              <td>向左</td>
+              <td><i class="icon icon-left"></i></td>
+              <td><code>&lt;i class="icon icon-left"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68d;</td>
+            </tr>
+            <tr>
+              <td>向右</td>
+              <td><i class="icon icon-right"></i></td>
+              <td><code>&lt;i class="icon icon-right"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe688;</td>
+            </tr>
+            <tr>
+              <td>搜索</td>
+              <td><i class="icon icon-search"></i></td>
+              <td><code>&lt;i class="icon icon-search"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe687;</td>
+            </tr>
+            <tr>
+              <td>赞</td>
+              <td><i class="icon icon-fabulous_normal"></i></td>
+              <td><code>&lt;i class="icon icon-fabulous_normal"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68c;</td>
+            </tr>
+            <tr>
+              <td>已赞</td>
+              <td><i class="icon icon-fabulous"></i></td>
+              <td><code>&lt;i class="icon icon-fabulous"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68a;</td>
+            </tr>
+            <tr>
+              <td>分享</td>
+              <td><i class="icon icon-share"></i></td>
+              <td><code>&lt;i class="icon icon-share"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe68b;</td>
+            </tr>
+            <tr>
+              <td>查看更多</td>
+              <td><i class="icon icon-more"></i></td>
+              <td><code>&lt;i class="icon icon-more"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe689;</td>
+            </tr>
+            <tr>
+              <td>留言评论</td>
+              <td><i class="icon icon-comment"></i></td>
+              <td><code>&lt;i class="icon icon-comment"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe686;</td>
+            </tr>
+            <tr>
+              <td>播放</td>
+              <td><i class="icon icon-play"></i></td>
+              <td><code>&lt;i class="icon icon-play"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe682;</td>
+            </tr>
+            <tr>
+              <td>菜单项</td>
+              <td><i class="icon icon-menu"></i></td>
+              <td><code>&lt;i class="icon icon-menu"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe680;</td>
+            </tr>
+            <tr>
+              <td>菜单列表</td>
+              <td><i class="icon icon-menulist"></i></td>
+              <td><code>&lt;i class="icon icon-menulist"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe681;</td>
+            </tr>
+            <tr>
+              <td>书签</td>
+              <td><i class="icon icon-mybook"></i></td>
+              <td><code>&lt;i class="icon icon-mybook"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67f;</td>
+            </tr>
+            <tr>
+              <td>日间模式</td>
+              <td><i class="icon icon-day"></i></td>
+              <td><code>&lt;i class="icon icon-day"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67e;</td>
+            </tr>
+            <tr>
+              <td>夜间模式</td>
+              <td><i class="icon icon-night"></i></td>
+              <td><code>&lt;i class="icon icon-night"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67b;</td>
+            </tr>
+            <tr>
+              <td>排序</td>
+              <td><i class="icon icon-order"></i></td>
+              <td><code>&lt;i class="icon icon-order"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67a;</td>
+            </tr>
+            <tr>
+              <td>触摸</td>
+              <td><i class="icon icon-finger"></i></td>
+              <td><code>&lt;i class="icon icon-finger"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67c;</td>
+            </tr>
+            <tr>
+              <td>字体</td>
+              <td><i class="icon icon-font"></i></td>
+              <td><code>&lt;i class="icon icon-font"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe67d;</td>
+            </tr>
+            <tr>
+              <td>熊掌</td>
+              <td><i class="icon icon-logo"></i></td>
+              <td><code>&lt;i class="icon icon-logo"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe685;</td>
+            </tr>
+            <tr>
+              <td>指南针</td>
+              <td><i class="icon icon-compass"></i></td>
+              <td><code>&lt;i class="icon icon-compass"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe695;</td>
+            </tr>
+            <tr>
+              <td>GitHub</td>
+              <td><i class="icon icon-github"></i></td>
+              <td><code>&lt;i class="icon icon-github"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe696;</td>
+            </tr>
+            <tr>
+              <td>组件</td>
+              <td><i class="icon icon-components"></i></td>
+              <td><code>&lt;i class="icon icon-components"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe697;</td>
+            </tr>
+            <tr>
+              <td>MIP</td>
+              <td><i class="icon icon-mip"></i></td>
+              <td><code>&lt;i class="icon icon-mip"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe698;</td>
+            </tr>
+            <tr>
+              <td>代码</td>
+              <td><i class="icon icon-code"></i></td>
+              <td><code>&lt;i class="icon icon-code"&gt;&lt;/i&gt;</code></td>
+              <td>&amp;#xe69a;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </details>
+    <details data-mag-component="toast">
+      <summary><h2>Toast</h2></summary>
+      <section class="component demo">
+        <button on="tap:demo-toast.show">Toast</button>
+        <mip-toggle id="demo-toast" class="toast-container" enterclass="toast-show" hidetimeout="3000">
+          <div class="toast-content">添加关注成功</div>
+        </mip-toggle>
+        <button on="tap:demo-toast2.show">头部 Toast</button>
+        <mip-toggle id="demo-toast2" class="toast-container toast-top" enterclass="toast-show" hidetimeout="3000">
+          <div class="toast-content">添加关注成功</div>
+        </mip-toggle>
+        <button on="tap:demo-toast3.show">底部 Toast</button>
+        <mip-toggle id="demo-toast3" class="toast-container toast-bottom" enterclass="toast-show" hidetimeout="3000">
+          <div class="toast-content">添加关注成功</div>
+        </mip-toggle>
+      </section>
+    </details>
+    <details data-mag-component="scrollbox">
+      <summary><h2>图片横滑</h2></summary>
+      <section class="component demo demo-border">
+        <mip-scrollbox data-type="row" class="scrollbox">
+          <div data-wrapper>
+            <div data-inner>
+              <div data-scroller class="flexbox">
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?a"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?b"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?c"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?d"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?e"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/400x400?f"
+                      width="400"
+                      height="400"
+                      layout="responsive"></mip-img>
+                  </a>
+                </div>
+                <div data-item data-col="4" class="scrollbox-more">
+                  <a href="https://www.mipengine.org" class="block scrollbox-more-wrap">
+                    <div class="scrollbox-more-inner">
+                      <i class="icon icon-more"></i>
+                      <span class="line-clamp1 gap-top">查看更多</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mip-scrollbox>
+      </section>
+      <section class="component demo demo-border">
+        <mip-scrollbox data-type="row" class="scrollbox">
+          <div data-wrapper>
+            <div data-inner>
+              <div data-scroller class="flexbox">
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?a"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?b"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?c"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?d"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?e"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4">
+                  <a href="https://www.mipengine.org" class="block">
+                    <mip-img
+                      src="https://dummyimage.com/300x400?f"
+                      width="300"
+                      height="400"
+                      layout="responsive"></mip-img>
+                    <p class="gap-top line-clamp2">两行截断，这是标题文本这是标题文本这是标题文本</p>
+                  </a>
+                </div>
+                <div data-item data-col="4" class="scrollbox-more">
+                  <div class="scrollbox-more-wrap">
+                    <div class="scrollbox-more-inner">
+                      <i class="icon icon-more"></i>
+                      <span class="line-clamp1 gap-top">我不能点击</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mip-scrollbox>
+      </section>
+    </details>
+    <details data-mag-component="sidebar" open>
+      <summary><h2>sidebar</h2></summary>
+      <section class="component demo">
+        <button on="tap:sidebar-left.open">打开左侧</button>
+        <button on="tap:sidebar-right.open">打开右侧</button>
+        <mip-sidebar
+          id="sidebar-left"
+          layout="nodisplay"
+          class="mip-hidden">
+          <ul>
+            <li><a href="#" class="active">首页</a></li>
+            <li>
+              <a href="#">模板</a>
+              <ul>
+                <li><a href="#">小说</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">博客</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">组件</a>
+              <ul>
+                <li><a href="#">按钮</a></li>
+                <li><a href="#">栅格化</a></li>
+                <li>
+                  <a href="#">提示</a>
+                  <ul>
+                    <li><a href="#">按钮</a></li>
+                    <li><a href="#">栅格化</a></li>
+                    <li><a href="#">提示</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">使用指南</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </mip-sidebar>
+        <mip-sidebar
+          id="sidebar-right"
+          layout="nodisplay"
+          side="right"
+          class="mip-hidden">
+          <h1>菜单</h1>
+          <h2>类目</h2>
+          <p>
+            <a href="#">AI</a>
+          </p>
+          <p>
+            <a href="#">程序程序程序程序程序程序程序，我换行了，支持换行的 A 标签，且是块级的</a>
+          </p>
+          <p>
+            MIP &copy; 2018
+          </p>
+        </mip-sidebar>
+      </section>
+    </details>
+
+    <details data-mag-component="carousel" open>
+      <summary><h2>轮播图</h2></summary>
+      <section class="component demo">
+        <div class="carousel">
+          <mip-carousel
+            layout="responsive"
+            width="600"
+            height="400"
+            indicatorId="mip-carousel-example">
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://dummyimage.com/600x400" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title1这里是title1这里是title1这里是title1这里是title1</div>
+            </a>
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://www.mipengine.org/static/img/sample_02.jpg" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title2</div>
+            </a>
+            <a target="_blank" href="https://www.mipengine.org">
+              <mip-img
+              src="https://www.mipengine.org/static/img/sample_03.jpg" layout="responsive"
+              width="600"
+              height="400">
+              </mip-img>
+              <div class="mip-carousle-subtitle line-clamp1">这里是title3</div>
+            </a>
+          </mip-carousel>
+
+          <div class="carousel-dot" id="mip-carousel-example">
+            <i class="mip-carousel-activeitem"></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </section>
+    </details>
+
+    <details data-mag-component="loading" open>
+      <summary><h2>加载</h2></summary>
+      <section class="component demo">
+        <h3>加载图标</h3>
+        <p>
+          <span class="loading">
+            <i class="loading-icon"></i>
+          </span>
+        </p>
+      </section>
+
+      <section class="component demo">
+        <h3>加载图标和文字</h3>
+        <p>
+          <span class="loading">
+            <i class="loading-icon gap-right-small"></i><span>加载中...</span>
+          </span>
+        </p>
+      </section>
+    </details>
+
+    <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-audio/mip-audio.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-toggle/mip-toggle.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-sidebar/mip-sidebar.js"></script>
+  </body>
+</html>

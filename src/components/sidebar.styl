@@ -1,0 +1,64 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+mip-sidebar
+  background-color color-default-bg
+  width 65% !important
+  padding-left .28rem
+  padding-right .26rem
+  > ul
+    list-style none
+    padding-top .28rem
+    padding-bottom .28rem
+    margin-left -.24rem
+    margin-right -.24rem
+    a
+      height .48rem
+      line-height .48rem
+      display block
+      padding-left .28rem
+      padding-right .28rem
+      color rgba(color-default-fg, .56)
+      &.active
+        color rgba(color-default-fg, .88)
+        font-weight 700
+      +state-active()
+        background-color alpha(color-default-fg, 0.04)
+    ul
+      a
+        padding-left .44rem
+      ul
+        a
+          padding-left .60rem
+
+.MIP-SIDEBAR-MASK
+  &:after,
+  &:before
+    opacity 0
+    width 35%
+    right 0
+    top 50%
+    transform translateY(-50%)
+    position absolute
+    content '轻触关闭菜单'
+    text-align center
+    color color-default-bg
+    text-size small
+  &:after
+    padding-top .2rem
+  &:before
+    margin-top -.2rem
+    font-size .24rem
+    content "\e67c"
+    font-family mag-icon
+  &[data-side="right"]
+    &:after,
+    &:before
+      right auto
+      left 0
+  &[open]
+    background-color rgba(color-default-fg, .7)
+    &:after,
+    &:before
+      transition opacity .2s ease-in .3s
+      opacity 1

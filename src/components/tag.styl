@@ -1,0 +1,36 @@
+tag-active()
+  &::before
+    content ' '
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color alpha(color-default-fg, 0.08)
+
+.tag
+  display inline-block
+  text-size 's'
+  border 1px solid alpha(color-default-fg, 0.64)
+  height .28rem
+  line-height .26rem
+  padding 0 .08rem
+  margin .06rem .04rem
+  position relative
+  &.active
+    tag-active()
+  &.tag-plain
+    border-color transparent
+  &.tag-virtual
+    border-style dashed
+  &.tag-fill
+    border-color transparent
+    color color-default-bg
+  &.tag-title
+    margin-left 0
+    margin-right 0
+
+input.for-tag
+  display none
+  &:checked + .tag
+    tag-active()

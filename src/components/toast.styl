@@ -1,0 +1,31 @@
+.toast-container
+  opacity 0
+  transition 240ms opacity ease-in-out
+  position fixed
+  top 50%
+  left 50%
+  transform translate3d(-50%,-50%, 0)
+  background-color alpha(color-default-fg, 0.8)
+  color color-default-bg
+  height .48rem
+  line-height .48rem
+  padding 0 .16rem
+  border-radius 0.04rem
+  text-size 's'
+  pointer-events none
+  &.toast-show
+    opacity 1
+  &.toast-top, &.toast-bottom
+    transform none
+    width 100%
+    left 0
+    border-radius 0
+  &.toast-top
+    top 0
+  &.toast-bottom
+    top unset
+    bottom 0
+    transform translate3d(0, 100%, 0)
+    transition 240ms transform ease-in, 240ms opacity ease-in-out
+    &.toast-show
+      transform translate3d(0, 0, 0)

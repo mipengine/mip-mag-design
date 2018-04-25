@@ -1,0 +1,35 @@
+for size in 'xs' 's' 'm' 'l' 'title-s' 'title-m' 'title-l' 'title-xl'
+  .font-size-{size}
+    text-size size
+
+for size in (0..10)
+  .font-size-{size}
+    font-size font-sizes-numeric[size]
+
+.rounded
+  border-radius 0.03rem
+.block
+  display block
+.no-white-space
+  font-size 0
+  *
+    text-size middle
+i.icon
+  line-height 1
+  vertical-align middle
+  &::before
+    vertical-align text-top
+
+for c in 'gray' 'red' 'pink' 'grape' 'violet' 'indigo' 'blue' 'cyan' 'teal' 'green' 'lime' 'yellow' 'orange' 'primary' 'accent'
+  .bg-{c}
+    background-color: colors[c][7]
+  .fg-{c}
+    color: colors[c][7]
+  for l in (1..12)
+    .bg-{c}-{l}
+      background-color: colors[c][l]
+    .fg-{c}-{l}
+      background-color: colors[c][l]
+
+.hidden
+  display none

@@ -1,0 +1,63 @@
+{
+  "name": "mip-mag-design",
+  "version": "2.0.2",
+  "description": "mag design components",
+  "main": "dist/mag-design.min.css",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-header": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-stylus": "^2.6.0",
+    "husky": "^0.14.3",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "test": "gulp test",
+    "preview": "gulp preview",
+    "preversion": "npm run build",
+    "commitmsg": "validate-commit-msg"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore",
+        "revert",
+        "release"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipengine/mip-mag-design.git"
+  },
+  "keywords": [
+    "mag"
+  ],
+  "author": "mipengine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mipengine/mip-mag-design/issues"
+  },
+  "homepage": "https://github.com/mipengine/mip-mag-design#readme",
+  "man": [
+    "./doc/main.md"
+  ],
+  "dependencies": {
+    "nib": "^1.1.2",
+    "normalize.css": "^7.0.0"
+  }
+}

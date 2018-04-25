@@ -1,0 +1,73 @@
+btn-set-color(prop)
+  {prop} color-primary-default
+  +state-hover()
+    {prop} color-primary[9]
+  +state-active()
+    {prop} color-primary[11]
+  &.btn-accent
+    {prop} color-accent-default
+    +state-hover()
+      {prop} color-accent[9]
+    +state-active()
+      {prop} color-accent[11]
+
+btn-set-disabled-color(prop)
+  +state-disabled()
+    {prop} alpha(color-dark-text, 0.36)
+
+.btn, button
+  display inline-block
+  color color-light-text
+  border transparent solid 0.01rem
+  border-radius 0.02rem
+  height 0.36rem
+  line-height 0.36rem
+  padding 0 0.16rem
+  margin 0.08rem
+  outline none
+  btn-set-color background-color
+  cursor pointer
+  user-select none
+  text-align center
+  +state-disabled()
+    color alpha(color-light-text, 0.42)
+  &.btn-link
+    background none
+    color color-primary-default
+    &.btn-accent
+      color color-accent-default
+    btn-set-disabled-color color
+    +state-hover()
+      background-color alpha(color-default-fg, 0.04)
+    +state-active()
+      background-color alpha(color-default-fg, 0.08)
+  &.btn-outline
+    background none
+    btn-set-color color
+    btn-set-disabled-color color
+    btn-set-color border-color
+    btn-set-disabled-color border-color
+    +state-hover()
+      background none
+    &.btn-accent
+      background none
+  &.btn-pill
+    border-radius 10rem
+  &.btn-block
+    display block
+    width 100%
+    margin 0
+  &.btn-big
+    height 0.44rem
+    line-height 0.44rem
+    text-size large
+  &.btn-small
+    height 0.28rem
+    line-height 0.28rem
+    text-size xs
+  &.btn-tiny
+    height 0.24rem
+    line-height 0.24rem
+    padding 0 0.08rem
+    margin 0.06rem 0.08rem
+    text-size xs

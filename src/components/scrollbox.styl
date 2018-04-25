@@ -1,0 +1,21 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+.scrollbox [data-item]
+  text-size small
+.scrollbox a
+  +state-active()
+    background-color alpha(color-default-fg, 0.04)
+
+.scrollbox-more
+  text-align center
+  .scrollbox-more-wrap
+    position relative
+    height 100%
+  .scrollbox-more-inner
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+    .icon
+      font-size .42rem

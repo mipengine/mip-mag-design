@@ -1,0 +1,27 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+
+.details
+  height .4rem
+  line-height .4rem
+  width 100%
+  text-align center
+  cursor pointer
+  color alpha(color-default-fg, 0.54)
+  .icon
+    font-size .1rem
+    margin-left .06rem
+  +state-active()
+    background-color alpha(color-default-fg, 0.04)
+
+.details-tip-expand
+  display none
+
+.details-open
+  .details-tip-expand
+    display block
+  .details-tip-close
+    display none
+
+

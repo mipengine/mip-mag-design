@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "8"
+script:
+  - npm run build
+before_deploy:
+  - cp example/redirect.html index.html
+  - sed -i '/dist/d' .gitignore
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
